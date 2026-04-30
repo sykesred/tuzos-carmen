@@ -1,0 +1,62 @@
+services:
+
+  # ──────────────────────────────────────────────────────────────
+  # Contenedor 1 · Next.js App
+  # ──────────────────────────────────────────────────────────────
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tuzos-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - TWILIO_PHONE_NUMBER=${TWILIO_PHONE_NUMBER}
+      - LEADS_SECRET=${LEADS_SECRET}
+    volumes:
+      - leads-data:/app/data
+    expose:
+      # Solo expuesto dentro de la red Docker (ngrok lo alcanza, no el host)
+      - "3000"
+    networks:
+      - tuzos-net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+  # ──────────────────────────────────────────────────────────────
+  # Contenedor 2 · ngrok tunnel → expone app:3000 al mundo
+  # ──────────────────────────────────────────────────────────────
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: tuzos-ngrok
+    restart: unless-stopped
+    command:
+      - "http"
+      - "app:3000"           # Apunta al contenedor app por nombre de servicio
+      - "--log=stdout"
+      - "--log-format=json"
+    environment:
+      - NGROK_AUTHTOKEN=3CPsPaqobmmDWVAwdoZJTCNvYtJ_3ZzYos5STzuVZsCuC3pV2
+      # Descomenta si tienes un dominio estático en ngrok (plan free incluye 1):
+      # - NGROK_DOMAIN=${NGROK_DOMAIN}
+    ports:
+      - "4040:4040"          # Inspector web de ngrok (ver requests en tiempo real)
+    depends_on:
+      app:
+        condition: service_started
+    networks:
+      - tuzos-net
+
+networks:
+  tuzos-net:
+    driver: bridge
+
+volumes:
+  leads-data:

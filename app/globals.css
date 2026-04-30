@@ -1,0 +1,238 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─── Light Mode – Tuzos Brand ──────────────────────────────── */
+:root {
+  --background: #ffffff;
+  --foreground: #0a0f2c;
+  --card: #f5faff;
+  --card-foreground: #0a0f2c;
+  --popover: #ffffff;
+  --popover-foreground: #0a0f2c;
+  --primary: #050c9c;
+  --primary-foreground: #ffffff;
+  --secondary: #dff1ff;
+  --secondary-foreground: #050c9c;
+  --muted: #eef6ff;
+  --muted-foreground: #3572ef;
+  --accent: #3572ef;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #ffffff;
+  --border: #c8e4f8;
+  --input: #d8edfc;
+  --ring: #3572ef;
+  --radius: 0.75rem;
+
+  /* Brand palette tokens */
+  --brand-deep: #050c9c;
+  --brand-blue: #3572ef;
+  --brand-sky: #3abef9;
+  --brand-light: #a7e6ff;
+  --brand-white: #ffffff;
+}
+
+/* ─── Dark Mode ─────────────────────────────────────────────── */
+.dark {
+  --background: #080616;
+  --foreground: #e8eeff;
+  --card: #1A1953;
+  --card-foreground: #e8eeff;
+  --popover: #1A1953;
+  --popover-foreground: #e8eeff;
+  --primary: #2F2FE4;
+  --primary-foreground: #ffffff;
+  --secondary: #162E93;
+  --secondary-foreground: #e8eeff;
+  --muted: #1A1953;
+  --muted-foreground: #a0a8d0;
+  --accent: #E6501B;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: #162E93;
+  --input: #162E93;
+  --ring: #2F2FE4;
+
+  --brand-deep: #1A1953;
+  --brand-blue: #2F2FE4;
+  --brand-sky: #2F2FE4;
+  --brand-light: #c0c8ff;
+  --brand-white: #e8eeff;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), 'Inter', sans-serif;
+  --font-heading: var(--font-montserrat), 'Montserrat', sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Expose brand palette as Tailwind utilities */
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-sky: var(--brand-sky);
+  --color-brand-light: var(--brand-light);
+  --color-brand-white: var(--brand-white);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    scroll-behavior: smooth;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ─── FullCalendar – Tuzos Brand Override ─────────────────────── */
+.booking-calendar-wrapper .fc {
+  font-family: var(--font-sans);
+}
+
+.booking-calendar-wrapper .fc .fc-toolbar {
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.booking-calendar-wrapper .fc .fc-toolbar-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--brand-deep);
+  text-transform: capitalize;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-toolbar-title {
+  color: var(--brand-sky);
+}
+
+.booking-calendar-wrapper .fc .fc-button {
+  background-color: var(--brand-deep) !important;
+  border-color: var(--brand-deep) !important;
+  border-radius: 0.625rem !important;
+  padding: 0.3rem 0.8rem !important;
+  font-size: 0.85rem !important;
+  box-shadow: none !important;
+  transition: background-color 0.2s !important;
+}
+
+.booking-calendar-wrapper .fc .fc-button:hover {
+  background-color: var(--brand-blue) !important;
+  border-color: var(--brand-blue) !important;
+}
+
+.booking-calendar-wrapper .fc .fc-button:focus {
+  box-shadow: 0 0 0 2px var(--brand-sky) !important;
+}
+
+.booking-calendar-wrapper .fc .fc-col-header-cell {
+  background-color: var(--secondary);
+  padding: 0.4rem 0;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-col-header-cell {
+  background-color: var(--muted);
+}
+
+.booking-calendar-wrapper .fc .fc-col-header-cell-cushion {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: var(--brand-deep);
+  letter-spacing: 0.06em;
+  text-decoration: none !important;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-col-header-cell-cushion {
+  color: var(--brand-sky);
+}
+
+.booking-calendar-wrapper .fc .fc-daygrid-day-number {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--foreground);
+  text-decoration: none !important;
+  padding: 0.3rem 0.5rem;
+}
+
+.booking-calendar-wrapper .fc .fc-day-today {
+  background-color: #dff1ff !important;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-day-today {
+  background-color: var(--muted) !important;
+}
+
+.booking-calendar-wrapper .fc .fc-day-today .fc-daygrid-day-number {
+  background-color: var(--brand-deep);
+  color: white;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-day-today .fc-daygrid-day-number {
+  background-color: var(--brand-sky);
+  color: #ffffff;
+}
+
+.booking-calendar-wrapper .fc .fc-daygrid-day:hover {
+  background-color: #dff1ff !important;
+  cursor: pointer;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-daygrid-day:hover {
+  background-color: var(--muted) !important;
+}
+
+.booking-calendar-wrapper .fc .fc-day-other .fc-daygrid-day-number {
+  opacity: 0.35;
+}
+
+.booking-calendar-wrapper .fc td,
+.booking-calendar-wrapper .fc th {
+  border-color: var(--border);
+}
+
+.booking-calendar-wrapper .fc .fc-scrollgrid {
+  border-color: var(--border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.booking-calendar-wrapper .fc .fc-scrollgrid-section > td {
+  border: none;
+}
