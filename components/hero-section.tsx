@@ -22,8 +22,8 @@ export function HeroSection() {
       <div
         className="absolute inset-0 opacity-10 dark:opacity-5"
         style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #3572ef 0%, transparent 50%),
-                            radial-gradient(circle at 75% 75%, #3abef9 0%, transparent 50%)`,
+          backgroundImage: `radial-gradient(circle at 25% 25%, #ed742e 0%, transparent 50%),
+                            radial-gradient(circle at 75% 75%, #0b2472 0%, transparent 50%)`,
         }}
         aria-hidden="true"
       />
@@ -39,71 +39,46 @@ export function HeroSection() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left – text content */}
-          <div className="flex flex-col gap-6">
-            {/* Badge */}
-            <div className="inline-flex">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-brand-sky text-xs font-semibold tracking-wide">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-sky animate-pulse" />
-                {t("hero.badge")}
-              </span>
-            </div>
-
-            {/* Heading */}
-            <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-balance text-white">
-              {t("hero.heading_1")}{" "}
-              <span className="text-brand-sky">{t("hero.heading_2")}</span>
-              <br />
-              {t("hero.heading_3")}
-            </h1>
-
-            {/* Subheading */}
-            <p className="text-base sm:text-lg text-white/70 max-w-lg leading-relaxed text-pretty">
-              {t("hero.subheading")}
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#25D366] text-white rounded-2xl font-semibold text-base hover:bg-[#20bd5a] active:scale-95 transition-all shadow-lg shadow-[#25D366]/30"
-              >
-                <MessageCircle size={20} />
-                {t("hero.cta_primary")}
-              </a>
-              <button
-                onClick={() => scrollTo("#categorias")}
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-white/10 border border-white/20 text-white rounded-2xl font-semibold text-base hover:bg-white/20 active:scale-95 transition-all backdrop-blur-sm"
-              >
-                {t("hero.cta_secondary")}
-                <ChevronRight size={18} />
-              </button>
-            </div>
+        <div className="flex flex-col items-center text-center gap-6 max-w-3xl mx-auto">
+          {/* Badge */}
+          <div className="inline-flex">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ed742e]/20 border border-[#ed742e]/40 text-[#ed742e] text-xs font-semibold tracking-wide">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ed742e] animate-pulse" />
+              {t("hero.badge")}
+            </span>
           </div>
 
-          {/* Right – hero image */}
-          <div className="relative hidden lg:flex justify-center items-center">
-            <div className="relative w-full max-w-md aspect-square">
-              {/* Glow ring */}
-              <div className="absolute inset-0 rounded-full bg-brand-sky/20 blur-3xl" aria-hidden="true" />
-              <img
-                src="/images/hero.jpg"
-                alt="Equipo completo de Tuzos Cd. del Carmen — jugadores y cuerpo técnico"
-                className="relative z-10 w-full h-full object-cover rounded-3xl border border-white/10 shadow-2xl"
-              />
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 z-20 bg-white dark:bg-card rounded-2xl px-5 py-3 shadow-xl border border-border">
-                <p className="text-2xl font-black font-heading text-primary leading-none">150+</p>
-                <p className="text-xs text-muted-foreground font-medium mt-0.5">Jugadores activos</p>
-              </div>
-              <div className="absolute -top-4 -right-4 z-20 bg-white dark:bg-card rounded-2xl px-5 py-3 shadow-xl border border-border">
-                <p className="text-2xl font-black font-heading text-brand-sky leading-none">6</p>
-                <p className="text-xs text-muted-foreground font-medium mt-0.5">Categorías</p>
-              </div>
-            </div>
+          {/* Heading */}
+          <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] text-white">
+            {t("hero.heading_1")}{" "}
+            <span className="text-[#ed742e]">{t("hero.heading_2")}</span>
+            <br />
+            {t("hero.heading_3")}
+          </h1>
+
+          {/* Subheading */}
+          <p className="text-base sm:text-lg text-white/70 max-w-xl leading-relaxed">
+            {t("hero.subheading")}
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#25D366] text-white rounded-2xl font-semibold text-base hover:bg-[#20bd5a] active:scale-95 transition-all shadow-lg shadow-[#25D366]/30"
+            >
+              <MessageCircle size={20} />
+              {t("hero.cta_primary")}
+            </a>
+            <button
+              onClick={() => scrollTo("#categorias")}
+              className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-white/10 border border-white/20 text-white rounded-2xl font-semibold text-base hover:bg-white/20 active:scale-95 transition-all backdrop-blur-sm"
+            >
+              {t("hero.cta_secondary")}
+              <ChevronRight size={18} />
+            </button>
           </div>
         </div>
 

@@ -7,60 +7,60 @@
 :root {
   --background: #ffffff;
   --foreground: #0a0f2c;
-  --card: #f5faff;
+  --card: #ffffff;
   --card-foreground: #0a0f2c;
   --popover: #ffffff;
   --popover-foreground: #0a0f2c;
-  --primary: #050c9c;
+  --primary: #0b2472;
   --primary-foreground: #ffffff;
-  --secondary: #dff1ff;
-  --secondary-foreground: #050c9c;
-  --muted: #eef6ff;
-  --muted-foreground: #3572ef;
-  --accent: #3572ef;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0b2472;
+  --muted: #f8fafc;
+  --muted-foreground: #64748b;
+  --accent: #ed742e;
   --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #ffffff;
-  --border: #c8e4f8;
-  --input: #d8edfc;
-  --ring: #3572ef;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #ed742e;
   --radius: 0.75rem;
 
   /* Brand palette tokens */
-  --brand-deep: #050c9c;
-  --brand-blue: #3572ef;
-  --brand-sky: #3abef9;
-  --brand-light: #a7e6ff;
+  --brand-deep: #0b2472;
+  --brand-blue: #ed742e;
+  --brand-sky: #ed742e;
+  --brand-light: #ffd4b0;
   --brand-white: #ffffff;
 }
 
 /* ─── Dark Mode ─────────────────────────────────────────────── */
 .dark {
-  --background: #080616;
-  --foreground: #e8eeff;
-  --card: #1A1953;
-  --card-foreground: #e8eeff;
-  --popover: #1A1953;
-  --popover-foreground: #e8eeff;
-  --primary: #2F2FE4;
+  --background: #080d1c;
+  --foreground: #f0e8e0;
+  --card: #0f1a40;
+  --card-foreground: #f0e8e0;
+  --popover: #0f1a40;
+  --popover-foreground: #f0e8e0;
+  --primary: #ed742e;
   --primary-foreground: #ffffff;
-  --secondary: #162E93;
-  --secondary-foreground: #e8eeff;
-  --muted: #1A1953;
-  --muted-foreground: #a0a8d0;
-  --accent: #E6501B;
+  --secondary: #0b2472;
+  --secondary-foreground: #f0e8e0;
+  --muted: #1a2050;
+  --muted-foreground: #ffd4b0;
+  --accent: #ed742e;
   --accent-foreground: #ffffff;
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: #162E93;
-  --input: #162E93;
-  --ring: #2F2FE4;
+  --border: #1a2050;
+  --input: #1a2050;
+  --ring: #ed742e;
 
-  --brand-deep: #1A1953;
-  --brand-blue: #2F2FE4;
-  --brand-sky: #2F2FE4;
-  --brand-light: #c0c8ff;
-  --brand-white: #e8eeff;
+  --brand-deep: #0b2472;
+  --brand-blue: #ed742e;
+  --brand-sky: #ed742e;
+  --brand-light: #ffd4b0;
+  --brand-white: #f0e8e0;
 }
 
 @theme inline {
@@ -136,8 +136,8 @@
 }
 
 .booking-calendar-wrapper .fc .fc-button {
-  background-color: var(--brand-deep) !important;
-  border-color: var(--brand-deep) !important;
+  background-color: #ed742e !important;
+  border-color: #ed742e !important;
   border-radius: 0.625rem !important;
   padding: 0.3rem 0.8rem !important;
   font-size: 0.85rem !important;
@@ -146,8 +146,8 @@
 }
 
 .booking-calendar-wrapper .fc .fc-button:hover {
-  background-color: var(--brand-blue) !important;
-  border-color: var(--brand-blue) !important;
+  background-color: #0b2472 !important;
+  border-color: #0b2472 !important;
 }
 
 .booking-calendar-wrapper .fc .fc-button:focus {
@@ -186,7 +186,7 @@
 }
 
 .booking-calendar-wrapper .fc .fc-day-today {
-  background-color: #dff1ff !important;
+  background-color: #fff0e6 !important;
 }
 
 .dark .booking-calendar-wrapper .fc .fc-day-today {
@@ -233,6 +233,40 @@
   overflow: hidden;
 }
 
+/* ─── Weekend days – not bookable ─────────────────────────────── */
+.booking-calendar-wrapper .fc .fc-day-weekend-disabled {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  cursor: not-allowed !important;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-day-weekend-disabled {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.booking-calendar-wrapper .fc .fc-day-weekend-disabled .fc-daygrid-day-number {
+  opacity: 0.35;
+  text-decoration: line-through;
+}
+
+.booking-calendar-wrapper .fc .fc-day-weekend-disabled:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  cursor: not-allowed !important;
+}
+
 .booking-calendar-wrapper .fc .fc-scrollgrid-section > td {
   border: none;
+}
+
+/* ─── Soccer Ball Fall Animations ────────────────────────────── */
+@keyframes soccerFall {
+  0%   { transform: translateY(0)    rotate(0deg);   }
+  100% { transform: translateY(110vh) rotate(540deg); }
+}
+@keyframes soccerFallRight {
+  0%   { transform: translateY(0)    translateX(0)    rotate(0deg);   }
+  100% { transform: translateY(110vh) translateX(80px) rotate(540deg); }
+}
+@keyframes soccerFallLeft {
+  0%   { transform: translateY(0)    translateX(0)     rotate(0deg);   }
+  100% { transform: translateY(110vh) translateX(-80px) rotate(540deg); }
 }

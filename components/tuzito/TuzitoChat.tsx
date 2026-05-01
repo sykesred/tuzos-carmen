@@ -25,8 +25,8 @@ type Message = {
 /* ─── Constants ─────────────────────────────────────────────── */
 
 const WELCOME: Record<Lang, string> = {
-  es: "¡Hola! Soy **Tuzito** ⚽, tu asistente oficial de la Escuela Tuzos Cd. del Carmen.\n\n¿En qué puedo ayudarte?\n• Categorías y edades\n• Inscripciones\n• Torneos\n• Horarios y ubicación",
-  en: "Hi there! I'm **Tuzito** ⚽, your official assistant from Escuela Tuzos Cd. del Carmen.\n\nHow can I help you?\n• Categories and ages\n• Enrollment\n• Tournaments\n• Schedules and location",
+  es: "¡Hola! Soy **Tuzito** ⚽, tu asistente oficial de la Escuela Tuzos Carmen.\n\n¿En qué puedo ayudarte?\n• Categorías y edades\n• Inscripciones\n• Torneos\n• Horarios y ubicación",
+  en: "Hi there! I'm **Tuzito** ⚽, your official assistant from Escuela Tuzos Carmen.\n\nHow can I help you?\n• Categories and ages\n• Enrollment\n• Tournaments\n• Schedules and location",
 }
 
 const PLACEHOLDER: Record<Lang, string> = {
@@ -238,7 +238,7 @@ export function TuzitoChat() {
             aria-label="Chat con Tuzito"
           >
             {/* Header */}
-            <header className="flex-shrink-0 bg-gradient-to-r from-[#050c9c] via-[#1a3adb] to-[#050c9c] px-4 py-3 flex items-center gap-3">
+            <header className="flex-shrink-0 bg-[#ed742e] px-4 py-3 flex items-center gap-3">
               {/* Avatar */}
               <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-white/40 flex-shrink-0 shadow-md">
                 <Image
@@ -279,8 +279,8 @@ export function TuzitoChat() {
               </button>
             </header>
 
-            {/* Orange accent line */}
-            <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-[#f97316] to-transparent flex-shrink-0" />
+            {/* Blue accent line */}
+            <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-[#0b2472] to-transparent flex-shrink-0" />
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-900 px-4 py-4 space-y-4">
@@ -306,7 +306,7 @@ export function TuzitoChat() {
                   <div
                     className={`max-w-[78%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                       msg.role === "user"
-                        ? "bg-gradient-to-br from-[#3572ef] to-[#050c9c] text-white rounded-tr-sm shadow-md shadow-blue-500/20"
+                        ? "bg-gradient-to-br from-[#ed742e] to-[#0b2472] text-white rounded-tr-sm shadow-md shadow-orange-500/20"
                         : "bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-tl-sm shadow-sm border border-slate-100 dark:border-slate-700"
                     }`}
                     dangerouslySetInnerHTML={{ __html: renderContent(msg.content) }}
@@ -322,9 +322,9 @@ export function TuzitoChat() {
                   </div>
                   <div className="bg-white dark:bg-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-1">
                     <span className="text-[10px] text-slate-400 mr-1 italic">{TYPING_LABEL[lang]}…</span>
-                    <span className="w-1.5 h-1.5 bg-[#3572ef] rounded-full animate-bounce [animation-delay:0ms]" />
-                    <span className="w-1.5 h-1.5 bg-[#3572ef] rounded-full animate-bounce [animation-delay:150ms]" />
-                    <span className="w-1.5 h-1.5 bg-[#3572ef] rounded-full animate-bounce [animation-delay:300ms]" />
+                    <span className="w-1.5 h-1.5 bg-[#ed742e] rounded-full animate-bounce [animation-delay:0ms]" />
+                    <span className="w-1.5 h-1.5 bg-[#ed742e] rounded-full animate-bounce [animation-delay:150ms]" />
+                    <span className="w-1.5 h-1.5 bg-[#ed742e] rounded-full animate-bounce [animation-delay:300ms]" />
                   </div>
                 </div>
               )}
@@ -346,7 +346,7 @@ export function TuzitoChat() {
                 placeholder={PLACEHOLDER[lang]}
                 disabled={isTyping}
                 aria-label={PLACEHOLDER[lang]}
-                className="flex-1 bg-slate-100 dark:bg-slate-700 rounded-2xl px-4 py-2.5 text-sm text-slate-800 dark:text-slate-100 placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-[#3572ef]/40 transition-all disabled:opacity-50"
+                className="flex-1 bg-slate-100 dark:bg-slate-700 rounded-2xl px-4 py-2.5 text-sm text-slate-800 dark:text-slate-100 placeholder:text-slate-400 outline-none focus:ring-2 focus:ring-[#ed742e]/40 transition-all disabled:opacity-50"
               />
               <button
                 type="submit"
@@ -367,7 +367,7 @@ export function TuzitoChat() {
                 href="https://wa.me/5219382780560"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 text-[10px] font-semibold text-[#3572ef] hover:text-[#f97316] transition-colors"
+                className="flex items-center gap-1 text-[10px] font-semibold text-[#ed742e] hover:text-[#0b2472] transition-colors"
               >
                 <Phone size={9} />
                 WhatsApp 938 278 0560
@@ -394,16 +394,16 @@ export function TuzitoChat() {
         {!isOpen && (
           <span
             className="absolute inset-0 rounded-full animate-ping opacity-30"
-            style={{ background: "radial-gradient(circle, #f97316 0%, #3572ef 100%)" }}
+            style={{ background: "radial-gradient(circle, #ed742e 0%, #0b2472 100%)" }}
           />
         )}
 
         {/* Button face */}
         <div
-          className="relative w-full h-full rounded-full overflow-hidden border-[3px] border-white shadow-xl shadow-black/30"
+          className="relative w-full h-full rounded-full overflow-hidden border-[3px] border-[#ed742e] shadow-xl shadow-black/30"
           style={{
             background: isOpen
-              ? "linear-gradient(135deg, #050c9c, #3572ef)"
+              ? "linear-gradient(135deg, #0b2472, #ed742e)"
               : undefined,
           }}
         >

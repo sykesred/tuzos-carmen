@@ -16,9 +16,8 @@ export const en = {
       cat_8_9: "Tuzos Kids (8-9)",
       cat_10_11: "Tuzos Inicial (10-11)",
       cat_12_13: "Tuzos Desarrollo (12-13)",
-      cat_14_15: "Tuzos Formación (14-15)",
-      cat_sub18: "Tuzos Juvenil (16-17)",
-      cat_sub18_tuzos: "Sub-18 Tuzos",
+      cat_sub15: "Sub-15",
+      cat_sub18: "Sub-18 Tuzos",
       genuine: "Tuzos Genuine",
     },
     actividades_items: {
@@ -28,7 +27,7 @@ export const en = {
       calendario: "General Calendar",
     },
     convocatorias_items: {
-      unete: "Be part of Tuzos C.d Carmen",
+      unete: "Be part of Tuzos Carmen",
       visorias: "Official Trials",
     },
     nosotros_items: {
@@ -56,7 +55,7 @@ export const en = {
     cta_secondary: "View Categories",
     stat_1_value: "150+",
     stat_1_label: "Players",
-    stat_2_value: "9",
+    stat_2_value: "8",
     stat_2_label: "Categories",
     stat_3_value: "",
     stat_3_label: "Certified Coaches",
@@ -103,16 +102,10 @@ export const en = {
         players: "26+",
       },
       {
-        age: "14-15 years",
-        name: "Tuzos Formación",
-        desc: "High performance, preparation for higher divisions and holistic growth.",
-        players: "22+",
-      },
-      {
-        age: "16-17 years",
-        name: "Tuzos Juvenil",
-        desc: "Advanced technical development and tactical training for high-potential players.",
-        players: "15+",
+        age: "14-17 years",
+        name: "Sub-15",
+        desc: "High performance, advanced tactical training and holistic development for high-potential players.",
+        players: "35+",
       },
       {
         age: "Sub-18",
@@ -170,20 +163,20 @@ export const en = {
   convocatorias: {
     section_badge: "Join Us",
     title: "Enrollment & Tryouts",
-    subtitle: "Two paths to becoming part of the Tuzos C.d Carmen family",
-    card_1_title: "Be part of Tuzos C.d Carmen",
+    subtitle: "Two paths to becoming part of the Tuzos Carmen family",
+    card_1_title: "Be part of Tuzos Carmen",
     card_1_tagline: "And give them the opportunity to join Club Pachuca",
     card_1_desc:
-      "Is your child between 4 and 18 years old and passionate about soccer? Enroll today and give them the opportunity to train with a first-division methodology.",
+      "Is your child between 4 and 18 years old and passionate about soccer? Enroll today and give them the opportunity to train with Club Pachuca's methodology.",
     card_1_badge: "Open enrollment",
     card_1_cta: "Enroll via WhatsApp",
     card_1_items: [
       "Enrollment",
       "Medical insurance for the player",
       "Official uniforms",
+      "Limited groups per category",
     ],
     card_1_affiliation: "We belong to the structure of the Club Pachuca affiliate schools",
-    card_1_talent: "If your player has the level, they can be considered for the youth academy",
     card_2_title: "Official Trials",
     card_2_desc:
       "We identify talent for competitive categories. If your player has what it takes, they can join our representative teams and compete at a regional level.",
@@ -195,6 +188,7 @@ export const en = {
       "Selection by category",
       "Regional and national competition",
     ],
+    card_2_talent: "If your player has the level, they can be considered for the youth academy",
   },
 
   nosotrosPage: {
@@ -231,26 +225,29 @@ export const en = {
     torneos_title: "Tournaments We Participate In",
     torneos_subtitle: "Competitions where we represent Ciudad del Carmen",
     torneos_items: [
-      { name: "Liga Golden Plus", location: "Cd. Carmen" },
-      { name: "Liga Cantera", location: "Cd. Carmen" },
       { name: "Torneo GP", location: "Pachuca, Hgo." },
-      { name: "Copa Mérida", location: "Mérida, Yuc." },
+      { name: "Liga Cantera", location: "Cd. Carmen" },
+      { name: "Liga Golden Plus", location: "Cd. Carmen" },
+      { name: "Super Copa Jaguar Mérida", location: "Mérida, Yuc." },
       { name: "Copa Cancún", location: "Cancún, Q.R." },
     ],
+
+    slogan: "The stars are our children",
 
     filosofia_title: "Institutional Philosophy",
     filosofia_desc:
       "We believe in the holistic development of the player: discipline, teamwork, respect and consistency are the pillars of our school. We follow the Tuzos Pachuca playing model.",
 
     equipo_title: "Meet the Team",
-    equipo_desc:
-      "Our certified coaches hold credentials from the Mexican Football Federation with extensive experience in developing Tuzobrinos. Our staff is committed to every student's growth.",
+    equipo_highlight:
+      "Our coaches hold a degree in physical education and are certified by Club Pachuca",
+    equipo_desc: "Our technical staff is committed to the development of every Tuzobrino",
 
     visita_title: "Come Visit Us",
     visita_desc:
-      "We are located in Ciudad del Carmen, Campeche. Our facilities include a soccer field, locker rooms, and a waiting area for parents.",
+      "We are located in Ciudad del Carmen, Campeche. We train in a safe space.",
     visita_address: "Ciudad del Carmen, Campeche, Mexico",
-    visita_schedule: "Mon, Wed & Fri · 4:00 PM – 7:00 PM",
+    visita_schedule: "Mon, Wed & Fri · 4:00 PM – 8:00 PM",
     visita_cta: "Get Directions",
   },
 
@@ -312,9 +309,9 @@ export const en = {
       "Our certified coaches hold credentials from the Mexican Football Federation with extensive experience in developing Tuzobrinos. Our staff is committed to every student's growth.",
     visita_title: "Come Visit Us",
     visita_desc:
-      "We are located in Ciudad del Carmen, Campeche. Our facilities include a soccer field, locker rooms, and a waiting area for parents.",
+      "We are located in Ciudad del Carmen, Campeche. We train in a safe space.",
     visita_address: "Ciudad del Carmen, Campeche, Mexico",
-    visita_schedule: "Mon, Wed & Fri · 4:00 PM – 7:00 PM",
+    visita_schedule: "Mon, Wed & Fri · 4:00 PM – 8:00 PM",
     visita_cta: "Get Directions",
   },
 
@@ -347,7 +344,7 @@ export const en = {
     nav_title: "Navigation",
     contact_title: "Contact",
     social_title: "Social Media",
-    copyright: "© 2025 Tuzos Cd. del Carmen. All rights reserved.",
+    copyright: "© 2025 Tuzos Carmen. All rights reserved.",
     affiliation: "Official affiliate school of Tuzos Pachuca.",
   },
 } as const

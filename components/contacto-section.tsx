@@ -256,7 +256,7 @@ export function ContactoSection() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación Tuzos Cd. del Carmen"
+                title="Ubicación Tuzos Carmen"
               />
             </div>
           </div>

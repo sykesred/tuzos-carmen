@@ -34,6 +34,8 @@ const UI = {
     error: "Error al agendar",
     requestError: "Error en la solicitud",
     locale: "es-MX",
+    weekdaysOnly: "Solo disponible de lunes a viernes",
+    weekendNote: "📅 Clases de prueba solo en días de semana (lun–vie)",
   },
   en: {
     steps: ["Category", "Date", "Time", "Info"],
@@ -50,6 +52,8 @@ const UI = {
     error: "Booking error",
     requestError: "Request error",
     locale: "en-US",
+    weekdaysOnly: "Available Monday through Friday only",
+    weekendNote: "📅 Tryout classes available weekdays only (Mon–Fri)",
   },
 }
 
@@ -64,7 +68,13 @@ export default function BookingCalendar() {
 
   const slots = ["16:00", "17:00", "18:00", "19:00"]
 
+  const isWeekend = (dateStr: string) => {
+    const day = new Date(dateStr + "T00:00:00").getDay()
+    return day === 0 || day === 6
+  }
+
   const handleDateClick = (info: any) => {
+    if (isWeekend(info.dateStr)) return
     setSelectedDate(info.dateStr)
     setSelectedTime(null)
   }
@@ -132,7 +142,7 @@ export default function BookingCalendar() {
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                   stepsDone[i]
-                    ? "bg-[#050c9c] text-white shadow-md"
+                    ? "bg-[#FF653F] text-white shadow-md"
                     : "bg-[#dff1ff] dark:bg-[#205295] text-[#3572ef] dark:text-[#a7e6ff]"
                 }`}
               >
@@ -197,8 +207,8 @@ export default function BookingCalendar() {
                     onClick={() => setSelectedTime(time)}
                     className={`py-3 rounded-xl text-sm font-bold transition-all duration-200 ${
                       selectedTime === time
-                        ? "bg-[#050c9c] text-white shadow-md scale-105"
-                        : "bg-[#f5faff] dark:bg-[#0a2647] text-[#3572ef] dark:text-[#a7e6ff] border border-[#c8e4f8] dark:border-[#205295] hover:bg-[#dff1ff] dark:hover:bg-[#205295] hover:scale-[1.03]"
+                        ? "bg-[#FF653F] text-white shadow-md scale-105"
+                        : "bg-[#f5faff] dark:bg-[#0a2647] text-[#3572ef] dark:text-[#a7e6ff] border border-[#c8e4f8] dark:border-[#205295] hover:bg-[#FFA02E]/20 dark:hover:bg-[#205295] hover:scale-[1.03]"
                     }`}
                   >
                     {time}
@@ -230,7 +240,7 @@ export default function BookingCalendar() {
               />
               <button
                 onClick={handleBooking}
-                className="w-full bg-[#050c9c] hover:bg-[#3572ef] text-white font-bold py-3 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shadow-md"
+                className="w-full bg-[#FF653F] hover:bg-[#FFA02E] text-white font-bold py-3 rounded-xl transition-all duration-200 hover:scale-[1.02] active:scale-95 shadow-md"
               >
                 {tx.confirm}
               </button>
@@ -253,7 +263,14 @@ export default function BookingCalendar() {
               center: "title",
               right: "next",
             }}
+            dayCellClassNames={(info) => {
+              const day = info.date.getDay()
+              return day === 0 || day === 6 ? ["fc-day-weekend-disabled"] : []
+            }}
           />
+          <p className="text-xs text-center text-muted-foreground mt-3 opacity-70">
+            {tx.weekendNote}
+          </p>
         </div>
       </div>
     </div>

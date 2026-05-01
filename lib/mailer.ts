@@ -29,7 +29,7 @@ export async function sendEmail({
     console.log("📤 Enviando correo a:", to)
 
     await transporter.sendMail({
-      from: `"Tuzos Cd. del Carmen ⚽" <${process.env.EMAIL_USER}>`,
+      from: `"Tuzos Carmen ⚽" <${process.env.EMAIL_USER}>`,
       to: to.join(","), // importante
       subject,
       text, // fallback

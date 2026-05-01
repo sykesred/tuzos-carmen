@@ -16,9 +16,8 @@ export const es = {
       cat_8_9: "Tuzos Kids (8-9)",
       cat_10_11: "Tuzos Inicial (10-11)",
       cat_12_13: "Tuzos Desarrollo (12-13)",
-      cat_14_15: "Tuzos Formación (14-15)",
-      cat_sub18: "Tuzos Juvenil (16-17)",
-      cat_sub18_tuzos: "Sub-18 Tuzos",
+      cat_sub15: "Sub-15",
+      cat_sub18: "Sub-18 Tuzos",
       genuine: "Tuzos Genuine",
     },
     actividades_items: {
@@ -28,7 +27,7 @@ export const es = {
       calendario: "Calendario general",
     },
     convocatorias_items: {
-      unete: "Conviértete en Tuzos C.d Carmen",
+      unete: "Conviértete en Tuzos Carmen",
       visorias: "Visorias oficiales",
     },
     nosotros_items: {
@@ -56,7 +55,7 @@ export const es = {
     cta_secondary: "Ver Categorías",
     stat_1_value: "150+",
     stat_1_label: "Jugadores",
-    stat_2_value: "9",
+    stat_2_value: "8",
     stat_2_label: "Categorías",
     stat_3_value: "",
     stat_3_label: "Entrenadores certificados",
@@ -103,16 +102,10 @@ export const es = {
         players: "26+",
       },
       {
-        age: "14-15 años",
-        name: "Tuzos Formación",
-        desc: "Alto rendimiento, preparación para divisiones superiores y formación integral.",
-        players: "22+",
-      },
-      {
-        age: "16-17 años",
-        name: "Tuzos Juvenil",
-        desc: "Desarrollo técnico avanzado y formación táctica para jugadores de alto potencial.",
-        players: "15+",
+        age: "14-17 años",
+        name: "Sub-15",
+        desc: "Alto rendimiento, preparación táctica avanzada y formación integral para jugadores de alto potencial.",
+        players: "35+",
       },
       {
         age: "Sub-18",
@@ -170,20 +163,20 @@ export const es = {
   convocatorias: {
     section_badge: "Únete",
     title: "Convocatorias",
-    subtitle: "Dos vías para formar parte de la familia Tuzos C.d Carmen",
-    card_1_title: "Sé parte de Tuzos C.d Carmen",
-    card_1_tagline: "Y dales la oportunidad de unirse al club pachuca",
+    subtitle: "Dos vías para formar parte de la familia Tuzos Carmen",
+    card_1_title: "Sé parte de Tuzos Carmen",
+    card_1_tagline: "Y dales la oportunidad de unirse al Club Pachuca",
     card_1_desc:
-      "¿Tu hijo tiene entre 4 y 18 años y le apasiona el fútbol? Inscríbelo hoy en nuestra escuela y dale la oportunidad de formarse con metodología de primera división.",
+      "¿Tu hijo tiene entre 4 y 18 años y le apasiona el fútbol? Inscríbelo hoy en nuestra escuela y dale la oportunidad de formarse con la metodología del Club Pachuca.",
     card_1_badge: "Inscripciones abiertas",
     card_1_cta: "Inscríbete por WhatsApp",
     card_1_items: [
       "Inscripción",
       "Seguro médico para jugador",
       "Uniformes oficiales",
+      "Grupos limitados por categoría",
     ],
     card_1_affiliation: "Pertenecemos a la estructura de las escuelas filiales del club pachuca",
-    card_1_talent: "Si tu jugador tiene nivel puede ser considerado a fuerzas básicas",
     card_2_title: "Visorias Oficiales",
     card_2_desc:
       "Detectamos talento para las categorías competitivas. Si tu jugador tiene nivel, puede unirse a nuestros equipos de representación y competir a nivel regional.",
@@ -195,6 +188,7 @@ export const es = {
       "Selección por categoría",
       "Competición regional y nacional",
     ],
+    card_2_talent: "Si tu jugador tiene nivel puede ser considerado a fuerzas básicas",
   },
 
   nosotrosPage: {
@@ -231,26 +225,29 @@ export const es = {
     torneos_title: "Torneos a Participar",
     torneos_subtitle: "Competencias en las que representamos a Ciudad del Carmen",
     torneos_items: [
-      { name: "Liga Golden Plus", location: "Cd. Carmen" },
-      { name: "Liga Cantera", location: "Cd. Carmen" },
       { name: "Torneo GP", location: "Pachuca, Hgo." },
-      { name: "Copa Mérida", location: "Mérida, Yuc." },
+      { name: "Liga Cantera", location: "Cd. Carmen" },
+      { name: "Liga Golden Plus", location: "Cd. Carmen" },
+      { name: "Super Copa Jaguar Mérida", location: "Mérida, Yuc." },
       { name: "Copa Cancún", location: "Cancún, Q.R." },
     ],
+
+    slogan: "Las estrellas son nuestros niños",
 
     filosofia_title: "Filosofía Institucional",
     filosofia_desc:
       "Creemos en la formación integral del jugador: disciplina, trabajo en equipo, respeto y constancia son los pilares de nuestra escuela. Seguimos el modelo de juego de Tuzos Pachuca.",
 
     equipo_title: "Conoce al Equipo",
-    equipo_desc:
-      "Contamos con entrenadores certificados por la Federación Mexicana de Fútbol con experiencia en formación de tuzobrinos. Nuestro staff está comprometido con el desarrollo de cada alumno.",
+    equipo_highlight:
+      "Contamos con entrenadores con carrera en licenciatura en educación física y certificados por el Club Pachuca",
+    equipo_desc: "Nuestro cuerpo técnico está comprometido con el desarrollo de cada tuzobrino",
 
     visita_title: "Ven a Visitarnos",
     visita_desc:
-      "Estamos ubicados en Ciudad del Carmen, Campeche. Nuestras instalaciones cuentan con campo de fútbol, vestidores y área de espera para padres.",
+      "Estamos ubicados en Ciudad del Carmen, Campeche. Entrenamos en un espacio seguro.",
     visita_address: "Ciudad del Carmen, Campeche, México",
-    visita_schedule: "Lun, Mié y Vie · 4:00 PM – 7:00 PM",
+    visita_schedule: "Lun, Mié y Vie · 4:00 PM – 8:00 PM",
     visita_cta: "Cómo llegar",
   },
 
@@ -312,9 +309,9 @@ export const es = {
       "Contamos con entrenadores certificados por la Federación Mexicana de Fútbol con experiencia en formación de tuzobrinos. Nuestro staff está comprometido con el desarrollo de cada alumno.",
     visita_title: "Ven a Visitarnos",
     visita_desc:
-      "Estamos ubicados en Ciudad del Carmen, Campeche. Nuestras instalaciones cuentan con campo de fútbol, vestidores y área de espera para padres.",
+      "Estamos ubicados en Ciudad del Carmen, Campeche. Entrenamos en un espacio seguro.",
     visita_address: "Ciudad del Carmen, Campeche, México",
-    visita_schedule: "Lun, Mié y Vie · 4:00 PM – 7:00 PM",
+    visita_schedule: "Lun, Mié y Vie · 4:00 PM – 8:00 PM",
     visita_cta: "Cómo llegar",
   },
 
@@ -347,7 +344,7 @@ export const es = {
     nav_title: "Navegación",
     contact_title: "Contacto",
     social_title: "Redes Sociales",
-    copyright: "© 2025 Tuzos Cd. del Carmen. Todos los derechos reservados.",
+    copyright: "© 2025 Tuzos Carmen. Todos los derechos reservados.",
     affiliation: "Escuela filial oficial de Tuzos Pachuca.",
   },
 } as const

@@ -23,7 +23,7 @@ export function generateICS({
         description: `Alumno: ${name} (${email})`,
         start: [year, month, day, hour, minute],
         duration: { hours: 1 },
-        location: "Filial Tuzos Cd. del Carmen",
+        location: "Filial Tuzos Carmen",
       },
       (error, value) => {
         if (error) return reject(error)

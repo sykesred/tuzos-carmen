@@ -56,9 +56,8 @@ function useNavItems(): NavItem[] {
         { label: t("nav.categorias_items.cat_8_9"), href: "/categorias#cat-8-9" },
         { label: t("nav.categorias_items.cat_10_11"), href: "/categorias#cat-10-11" },
         { label: t("nav.categorias_items.cat_12_13"), href: "/categorias#cat-12-13" },
-        { label: t("nav.categorias_items.cat_14_15"), href: "/categorias#cat-14-15" },
+        { label: t("nav.categorias_items.cat_sub15"), href: "/categorias#cat-sub15" },
         { label: t("nav.categorias_items.cat_sub18"), href: "/categorias#cat-sub18" },
-        { label: t("nav.categorias_items.cat_sub18_tuzos"), href: "/categorias#cat-sub18-tuzos" },
         { label: t("nav.categorias_items.genuine"), href: "/categorias#genuine" },
       ],
     },
@@ -142,49 +141,39 @@ export function Navbar() {
     return pathname.startsWith(href)
   }
 
-  // Text colors adapt to whether navbar has a background or is transparent over dark hero
-  const linkBase = scrolled
-    ? "text-foreground/80 hover:text-primary hover:bg-muted"
-    : "text-white/90 hover:text-white hover:bg-white/10"
-  const linkActive = scrolled ? "text-primary bg-muted" : "text-white bg-white/15"
-  const iconColor = scrolled ? "text-foreground/70 hover:text-primary hover:bg-muted" : "text-white/80 hover:text-white hover:bg-white/10"
-  const borderColor = scrolled ? "border-border" : "border-white/25"
+  const linkBase = "text-white/90 hover:text-white hover:bg-white/15"
+  const linkActive = "text-white bg-white/25"
+  const iconColor = "text-white/80 hover:text-white hover:bg-white/15"
+  const borderColor = "border-white/30"
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-3 left-3 right-3 z-50 transition-all duration-300 rounded-2xl",
         scrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-sm"
-          : "bg-transparent"
+          ? "bg-[#0b2472] shadow-xl shadow-[#0b2472]/50"
+          : "bg-[#ed742e] shadow-lg shadow-[#ed742e]/40"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-18">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <Image
-              src="/images/logo-tuzos.png"
-              alt="Tuzos Ciudad del Carmen"
-              width={44}
-              height={44}
-              className={cn(
-                "shrink-0 group-hover:scale-105 transition-transform drop-shadow-sm",
-                scrolled ? "dark:mix-blend-lighten" : "mix-blend-lighten"
-              )}
-              priority
-            />
+        <div className="flex items-center justify-between h-16">
+          {/* Logo — centered on the bar, overflows equally above & below */}
+          <Link href="/" className="flex items-center gap-3 group overflow-visible">
+            <div className="w-[86px] h-[86px] rounded-full bg-white flex items-center justify-center shadow-2xl shadow-black/25 flex-shrink-0 group-hover:scale-105 transition-transform border-[3px] border-white/80">
+              <Image
+                src="/images/logo-tuzos.png"
+                alt="Tuzos Ciudad del Carmen"
+                width={76}
+                height={76}
+                className="object-contain"
+                priority
+              />
+            </div>
             <div className="flex flex-col leading-tight">
-              <span className={cn(
-                "font-heading font-black text-base leading-none transition-colors",
-                scrolled ? "text-primary dark:text-primary" : "text-white"
-              )}>
+              <span className="font-heading font-black text-base leading-none text-white">
                 Tuzos
               </span>
-              <span className={cn(
-                "text-[10px] font-medium leading-none transition-colors",
-                scrolled ? "text-muted-foreground" : "text-white/60"
-              )}>
+              <span className="text-[10px] font-medium leading-none text-white/70">
                 Cd. del Carmen
               </span>
             </div>
@@ -282,7 +271,7 @@ export function Navbar() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-xl text-sm font-semibold hover:opacity-90 active:scale-95 transition-all"
+              className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-white/90 text-[#0b2472] rounded-xl text-sm font-semibold active:scale-95 transition-all shadow-sm"
             >
               <MessageCircle size={15} />
               {t("nav.inscribete")}
@@ -323,7 +312,7 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border shadow-lg max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-4 duration-200">
+        <div className="lg:hidden bg-[#0b2472] border-t border-white/15 shadow-lg max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-4 duration-200">
           <div className="px-4 py-3 space-y-1">
             {navItems.map((item) =>
               item.items ? (
@@ -334,7 +323,7 @@ export function Navbar() {
                         mobileExpanded === item.key ? null : item.key
                       )
                     }
-                    className="w-full flex items-center justify-between px-3 py-3 rounded-lg text-sm font-semibold text-foreground/80 hover:bg-muted hover:text-primary transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-3 rounded-lg text-sm font-semibold text-white/90 hover:bg-white/10 hover:text-white transition-colors"
                   >
                     {item.label}
                     <ChevronDown
@@ -346,13 +335,13 @@ export function Navbar() {
                     />
                   </button>
                   {mobileExpanded === item.key && (
-                    <div className="ml-4 mt-1 space-y-0.5 border-l-2 border-brand-sky pl-4 animate-in fade-in-0 duration-150">
+                    <div className="ml-4 mt-1 space-y-0.5 border-l-2 border-[#ed742e] pl-4 animate-in fade-in-0 duration-150">
                       {item.items.map((sub) => (
                         <Link
                           key={sub.label}
                           href={sub.href}
                           onClick={() => setMobileOpen(false)}
-                          className="block py-2 text-sm text-foreground/70 hover:text-primary transition-colors"
+                          className="block py-2 text-sm text-white/70 hover:text-white transition-colors"
                         >
                           {sub.label}
                         </Link>
@@ -366,8 +355,8 @@ export function Navbar() {
                   href={item.href!}
                   onClick={() => setMobileOpen(false)}
                   className={cn(
-                    "block px-3 py-3 rounded-lg text-sm font-semibold text-foreground/80 hover:bg-muted hover:text-primary transition-colors",
-                    isActive(item.href!) && "text-primary bg-muted"
+                    "block px-3 py-3 rounded-lg text-sm font-semibold text-white/90 hover:bg-white/10 hover:text-white transition-colors",
+                    isActive(item.href!) && "text-white bg-white/20"
                   )}
                 >
                   {item.label}
@@ -381,7 +370,7 @@ export function Navbar() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-primary-foreground rounded-xl text-sm font-semibold hover:opacity-90 transition-all"
+                className="flex items-center justify-center gap-2 w-full py-3 bg-white hover:bg-white/90 text-[#0b2472] rounded-xl text-sm font-semibold transition-all"
               >
                 <MessageCircle size={16} />
                 {t("nav.inscribete")}

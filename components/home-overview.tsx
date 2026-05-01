@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useLanguage } from "@/lib/i18n/index.tsx"
+import { useLanguage } from "@/lib/i18n/index"
 import { Users, Trophy, Star, Heart, ArrowRight } from "lucide-react"
 
 
@@ -12,9 +12,9 @@ export function HomeOverview() {
     {
       icon: Star,
       href: "/nosotros",
-      color: "text-[#3572ef]",
-      bg: "bg-[#3572ef]/10 dark:bg-[#3572ef]/20",
-      border: "border-[#3572ef]/20 hover:border-[#3572ef]/50",
+      color: "text-[#ed742e]",
+      bg: "bg-[#ed742e]/10",
+      border: "border-[#ed742e]/20 hover:border-[#ed742e]/50",
       titleEs: "Nuestra Historia",
       titleEn: "Our Story",
       descEs: "Misión, visión, Grupo Pachuca e identidad como escuela filial oficial.",
@@ -23,31 +23,31 @@ export function HomeOverview() {
     {
       icon: Users,
       href: "/categorias",
-      color: "text-[#050c9c] dark:text-brand-sky",
-      bg: "bg-[#050c9c]/10 dark:bg-brand-sky/10",
-      border: "border-[#050c9c]/20 hover:border-[#050c9c]/40 dark:border-brand-sky/20 dark:hover:border-brand-sky/40",
-      titleEs: "9 Categorías",
-      titleEn: "9 Categories",
+      color: "text-[#0b2472] dark:text-brand-sky",
+      bg: "bg-[#0b2472]/10 dark:bg-brand-sky/10",
+      border: "border-[#0b2472]/20 hover:border-[#0b2472]/40 dark:border-brand-sky/20 dark:hover:border-brand-sky/40",
+      titleEs: "8 Categorías",
+      titleEn: "8 Categories",
       descEs: "De 4 a 18 años, incluyendo Sub-18 Tuzos y Tuzos Genuine.",
       descEn: "Ages 4 to 18, including Sub-18 Tuzos and Tuzos Genuine.",
     },
     {
       icon: Trophy,
       href: "/convocatorias",
-      color: "text-[#3abef9]",
-      bg: "bg-[#3abef9]/10 dark:bg-[#3abef9]/20",
-      border: "border-[#3abef9]/20 hover:border-[#3abef9]/50",
+      color: "text-[#ed742e]",
+      bg: "bg-[#ed742e]/10",
+      border: "border-[#ed742e]/20 hover:border-[#ed742e]/50",
       titleEs: "Inscripciones",
       titleEn: "Enrollment",
-      descEs: "Inscríbete o solicita visoria oficial para tu jugador.",
+      descEs: "Inscríbete o solicita clase de prueba.",
       descEn: "Enroll or request an official tryout for your player.",
     },
     {
       icon: Heart,
       href: "/patrocinios",
-      color: "text-[#050c9c] dark:text-[#a7e6ff]",
-      bg: "bg-[#050c9c]/10 dark:bg-[#a7e6ff]/10",
-      border: "border-[#050c9c]/20 hover:border-[#050c9c]/40 dark:border-[#a7e6ff]/20 dark:hover:border-[#a7e6ff]/40",
+      color: "text-[#0b2472] dark:text-brand-light",
+      bg: "bg-[#0b2472]/10 dark:bg-brand-light/10",
+      border: "border-[#0b2472]/20 hover:border-[#0b2472]/40 dark:border-brand-light/20 dark:hover:border-brand-light/40",
       titleEs: "Patrocinios",
       titleEn: "Sponsorships",
       descEs: "Apoya el desarrollo deportivo y lleva tu marca al campo.",
@@ -63,7 +63,7 @@ export function HomeOverview() {
             {lang === "en" ? "Explore" : "Explora"}
           </span>
           <h2 className="font-heading font-black text-3xl sm:text-4xl text-foreground mb-4">
-            {lang === "en" ? "Everything Tuzos C.d Carmen" : "Todo Tuzos C.d Carmen"}
+            {lang === "en" ? "Everything Tuzos Carmen" : "Todo Tuzos Carmen"}
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             {lang === "en"

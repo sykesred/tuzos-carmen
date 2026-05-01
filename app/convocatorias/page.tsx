@@ -1,9 +1,9 @@
 import { ConvocatoriasSection } from "@/components/convocatorias-section"
 
 export const metadata = {
-  title: "Convocatorias | Tuzos Cd. del Carmen",
+  title: "Convocatorias | Tuzos Carmen",
   description:
-    "Inscribe a tu tuzobrino en la Escuela Tuzos C.d Carmen o solicita una visoria oficial. Categorías de 4 a 18 años.",
+    "Inscribe a tu tuzobrino en la Escuela Tuzos Carmen o solicita una visoria oficial. Categorías de 4 a 18 años.",
 }
 
 export default function ConvocatoriasPage() {
@@ -24,7 +24,7 @@ export default function ConvocatoriasPage() {
             Convocatorias
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Dos vías para formar parte de la familia Tuzos C.d Carmen.
+            Dos vías para formar parte de la familia Tuzos Carmen.
           </p>
         </div>
       </div>

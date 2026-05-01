@@ -72,7 +72,7 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
             <div>
               <p className="font-heading font-black text-xl text-white mb-1">
-                ¿Listo para unirte a Tuzos C.d Carmen?
+                ¿Listo para unirte a Tuzos Carmen?
               </p>
               <p className="text-sm text-white/60">
                 Escríbenos directo por WhatsApp al <span className="text-white font-semibold">938 278 0560</span>

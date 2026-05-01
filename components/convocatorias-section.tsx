@@ -16,12 +16,12 @@ type ConvocatoriasSection = {
   card_1_cta: string
   card_1_items: string[]
   card_1_affiliation: string
-  card_1_talent: string
   card_2_title: string
   card_2_desc: string
   card_2_badge: string
   card_2_cta: string
   card_2_items: string[]
+  card_2_talent: string
 }
 
 export function ConvocatoriasSection() {
@@ -83,13 +83,10 @@ export function ConvocatoriasSection() {
                 ))}
               </ul>
 
-              {/* Affiliation & talent notes */}
-              <div className="space-y-2 pt-1">
+              {/* Affiliation note */}
+              <div className="pt-1">
                 <p className="text-white/80 text-xs sm:text-sm leading-relaxed font-medium">
                   {data.card_1_affiliation}
-                </p>
-                <p className="text-brand-sky/90 text-xs sm:text-sm leading-relaxed italic">
-                  {data.card_1_talent}
                 </p>
               </div>
             </div>
@@ -127,6 +124,9 @@ export function ConvocatoriasSection() {
                 <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                   {data.card_2_desc}
                 </p>
+                <p className="text-brand-sky text-xs sm:text-sm leading-relaxed italic mt-2 font-medium">
+                  {data.card_2_talent}
+                </p>
               </div>
 
               {/* List */}
@@ -143,7 +143,7 @@ export function ConvocatoriasSection() {
             {/* CTA */}
             <a
               href="https://web.ufd.mx/visorias/"
-              className="relative z-10 inline-flex items-center justify-center gap-2 w-full py-4 bg-primary text-primary-foreground rounded-2xl font-semibold text-sm hover:opacity-90 active:scale-95 transition-all"
+              className="relative z-10 inline-flex items-center justify-center gap-2 w-full py-4 bg-[#FF653F] hover:bg-[#FFA02E] text-white rounded-2xl font-semibold text-sm active:scale-95 transition-all"
             >
               <CalendarDays size={18} />
               {data.card_2_cta}

@@ -27,8 +27,8 @@ BEGIN:VEVENT
 SUMMARY:Clase muestra Tuzos
 DTSTART:${formatDate(start)}
 DTEND:${formatDate(end)}
-DESCRIPTION:Clase muestra Tuzos Cd. del Carmen
-LOCATION:Tuzos Cd. del Carmen
+DESCRIPTION:Clase muestra Tuzos Carmen
+LOCATION:Tuzos Carmen
 END:VEVENT
 END:VCALENDAR`
 }
@@ -80,7 +80,7 @@ export async function POST(req: Request) {
       <div style="max-width:600px; margin:auto; background:#FFFFFF; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
 
         <div style="background:#0A1F44; color:white; padding:25px; text-align:center;">
-          <h2 style="margin:0;">⚽ Tuzos Cd. del Carmen</h2>
+          <h2 style="margin:0;">⚽ Tuzos Carmen</h2>
           <p style="margin:5px 0 0; font-size:14px;">Clase muestra agendada</p>
         </div>
 
@@ -103,11 +103,11 @@ export async function POST(req: Request) {
             </span>
           </div>
 
-          <p>¡Nos vemos pronto en Tuzos Cd. del Carmen! ⚽</p>
+          <p>¡Nos vemos pronto en Tuzos Carmen! ⚽</p>
         </div>
 
         <div style="background:#F4F6F8; text-align:center; padding:15px; font-size:12px; color:#777;">
-          © 2026 Tuzos Cd. del Carmen
+          © 2026 Tuzos Carmen
         </div>
 
       </div>
@@ -124,7 +124,7 @@ Fecha: ${fechaBonita}
 Hora: ${horaBonita}
 Categoría: ${categoryLabel}
 
-¡Te esperamos en Tuzos Cd. del Carmen!
+¡Te esperamos en Tuzos Carmen!
 `
 
     // 📨 Enviar correo

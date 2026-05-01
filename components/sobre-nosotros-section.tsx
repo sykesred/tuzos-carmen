@@ -118,7 +118,7 @@ export function SobreNosotrosSection() {
           </div>
           <div className="text-center sm:text-left">
             <p className="text-sm font-semibold text-foreground leading-tight">
-              Tuzos Cd. del Carmen
+              Tuzos Carmen
             </p>
             <p className="text-xs text-muted-foreground">
               Escuela filial oficial · Tuzos Pachuca · Liga MX

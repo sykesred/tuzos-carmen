@@ -1,9 +1,9 @@
 import { ContactoSection } from "@/components/contacto-section"
 
 export const metadata = {
-  title: "Contacto | Tuzos Cd. del Carmen",
+  title: "Contacto | Tuzos Carmen",
   description:
-    "Contáctanos por WhatsApp o formulario. Escuela Tuzos C.d Carmen en Ciudad del Carmen, Campeche.",
+    "Contáctanos por WhatsApp o formulario. Escuela Tuzos Carmen en Ciudad del Carmen, Campeche.",
 }
 
 export default function ContactoPage() {

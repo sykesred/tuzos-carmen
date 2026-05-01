@@ -14,7 +14,7 @@ type CatItem = {
   players: string
 }
 
-const ACCENT_GRADIENT = "from-[#6d28d9] to-[#f97316]"
+const ACCENT_GRADIENT = "from-[#0b2472] to-[#ed742e]"
 
 const CAT_IDS = [
   "cat-4-5",
@@ -22,9 +22,8 @@ const CAT_IDS = [
   "cat-8-9",
   "cat-10-11",
   "cat-12-13",
-  "cat-14-15",
+  "cat-sub15",
   "cat-sub18",
-  "cat-sub18-tuzos",
 ]
 
 export function CategoriasSection() {
@@ -133,7 +132,7 @@ export function CategoriasSection() {
             <div
               key={cat.age}
               id={CAT_IDS[i]}
-              className="group relative bg-blue-50 dark:bg-card border border-blue-100 dark:border-border rounded-2xl overflow-hidden hover:shadow-lg dark:hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 scroll-mt-20"
+              className="group relative bg-[#fff7f2] dark:bg-card border border-[#ffd4b0] dark:border-border rounded-2xl overflow-hidden hover:shadow-lg dark:hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 scroll-mt-20"
             >
               {/* Gradient top bar */}
               <div
@@ -155,13 +154,13 @@ export function CategoriasSection() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-blue-600 dark:text-muted-foreground leading-relaxed mb-5">
+                <p className="text-sm text-[#0b2472] dark:text-muted-foreground leading-relaxed mb-5">
                   {cat.desc}
                 </p>
 
                 {/* Footer row */}
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-xs text-blue-500 dark:text-muted-foreground">
+                  <div className="flex items-center gap-1.5 text-xs text-[#0b2472] dark:text-muted-foreground">
                     <Users size={14} />
                     <span>{cat.players} {lang === "en" ? "players" : "jugadores"}</span>
                   </div>
@@ -169,7 +168,7 @@ export function CategoriasSection() {
                     href={`${WHATSAPP_BASE}${encodeURIComponent(`Hola, quisiera información sobre inscripciones en ${cat.name} (${cat.age}).`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-xs font-semibold text-[#050c9c] dark:text-primary hover:text-[#3572ef] dark:hover:text-primary/80 transition-colors"
+                    className="flex items-center gap-1 text-xs font-semibold text-[#0b2472] dark:text-primary hover:text-[#ed742e] dark:hover:text-primary/80 transition-colors"
                   >
                     <MessageCircle size={13} />
                     Inscribirse

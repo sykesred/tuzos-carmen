@@ -3,9 +3,9 @@ import BookingCalendar from "@/app/components/BookingCalendar"
 import { CalendarioHeading } from "@/components/calendario-heading"
 
 export const metadata = {
-  title: "Categorías | Tuzos Cd. del Carmen",
+  title: "Categorías | Tuzos Carmen",
   description:
-    "Conoce todas las categorías de la Escuela Tuzos C.d Carmen: desde Baby Tuzos (4 años) hasta Sub-18 Tuzos y la especial Tuzos Genuine de inclusión.",
+    "Conoce todas las categorías de la Escuela Tuzos Carmen: desde Baby Tuzos (4 años) hasta Sub-18 Tuzos y la especial Tuzos Genuine de inclusión.",
 }
 
 export default function CategoriasPage() {
