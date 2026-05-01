@@ -69,44 +69,45 @@ export const es = {
       "Programas especializados por edad para el desarrollo integral de cada jugador",
     ver_mas: "Ver más",
     genuine_badge: "Inclusión",
-    cats: [
-  {
-    age: "5-6",
-    name: "Baby Tuzos",
-    desc: "Introducción al fútbol",
-    schedule: "Martes y Jueves 16:30 a 17:30",
+        cats: [
+      {
+        age: "5-6",
+        name: "Baby Tuzos",
+        desc: "Introducción al fútbol",
+        schedule: "Martes y Jueves 16:30 a 17:30",
+      },
+      {
+        age: "7-8",
+        name: "Tuzos Kids",
+        desc: "Formación básica",
+        schedule: "Martes y Jueves 16:30 a 17:30",
+      },
+      {
+        age: "9-10",
+        name: "Tuzos Inicial",
+        desc: "Desarrollo técnico",
+        schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+      },
+      {
+        age: "11-12",
+        name: "Tuzos Formación",
+        desc: "Perfeccionamiento",
+        schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+      },
+      {
+        age: "13-15",
+        name: "Tuzos Desarrollo",
+        desc: "Alto rendimiento",
+        schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+      },
+      {
+        age: "sub-18",
+        name: "Sub-18 Tuzos",
+        desc: "Competitivo",
+        schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+      },
+    ],
   },
-  {
-    age: "7-8",
-    name: "Tuzos Kids",
-    desc: "Formación básica",
-    schedule: "Martes y Jueves 16:30 a 17:30",
-  },
-  {
-    age: "9-10",
-    name: "Tuzos Inicial",
-    desc: "Desarrollo técnico",
-    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
-  },
-  {
-    age: "11-12",
-    name: "Tuzos Formación",
-    desc: "Perfeccionamiento",
-    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
-  },
-  {
-    age: "13-15",
-    name: "Tuzos Desarrollo",
-    desc: "Alto rendimiento",
-    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
-  },
-  {
-    age: "sub-18",
-    name: "Sub-18 Tuzos",
-    desc: "Competitivo",
-    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
-  },
-],
 
   genuine: {
     section_badge: "Inclusión Social",
@@ -125,7 +126,7 @@ export const es = {
     date_label: "21 de Marzo",
     date_desc: "Día Mundial del Síndrome de Down",
     cta: "Conoce más sobre Genuine",
-    cta: "Entrenamos Martes y Jueves de 16:30 a 17:30 pm"
+    schedule: "Entrenamos Martes y Jueves de 16:30 a 17:30 pm",
   },
 
   actividades: {
