@@ -11,14 +11,12 @@ export const en = {
     inscribete: "Enroll Now",
     language: "ES",
     categorias_items: {
-      cat_4_5: "Baby Tuzos (4-5)",
-      cat_6_7: "Mini Tuzos (6-7)",
-      cat_8_9: "Tuzos Kids (8-9)",
-      cat_10_11: "Tuzos Inicial (10-11)",
-      cat_12_13: "Tuzos Desarrollo (12-13)",
-      cat_14_15: "Tuzos Formación (14-15)",
-      cat_sub18: "Tuzos Juvenil (16-17)",
-      cat_sub18_tuzos: "Sub-18 Tuzos",
+      cat_5_6: "Baby Tuzos (5-6)",
+      cat_7_8: "Mini Tuzos (7-8)",
+      cat_9_10: "Tuzos Kids (9-10)",
+      cat_11_12: "Tuzos Inicial (11-12)",
+      cat_13_15: "Tuzos Sub-15 (13-15)",
+      cat_sub18_tuzos: "Tuzos Sub-18",
       genuine: "Tuzos Genuine",
     },
     actividades_items: {
@@ -28,7 +26,7 @@ export const en = {
       calendario: "General Calendar",
     },
     convocatorias_items: {
-      unete: "Be part of Tuzos C.d Carmen",
+      unete: "Be part of Tuzos Carmen",
       visorias: "Official Trials",
     },
     nosotros_items: {
@@ -56,7 +54,7 @@ export const en = {
     cta_secondary: "View Categories",
     stat_1_value: "150+",
     stat_1_label: "Players",
-    stat_2_value: "9",
+    stat_2_value: "7",
     stat_2_label: "Categories",
     stat_3_value: "",
     stat_3_label: "Certified Coaches",

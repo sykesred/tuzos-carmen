@@ -11,14 +11,12 @@ export const es = {
     inscribete: "Inscríbete",
     language: "EN",
     categorias_items: {
-      cat_4_5: "Baby Tuzos (4-5)",
-      cat_6_7: "Mini Tuzos (6-7)",
-      cat_8_9: "Tuzos Kids (8-9)",
-      cat_10_11: "Tuzos Inicial (10-11)",
-      cat_12_13: "Tuzos Desarrollo (12-13)",
-      cat_14_15: "Tuzos Formación (14-15)",
-      cat_sub18: "Tuzos Juvenil (16-17)",
-      cat_sub18_tuzos: "Sub-18 Tuzos",
+      cat_5_6: "Baby Tuzos (5-6)",
+      cat_7_8: "Mini Tuzos (7-8)",
+      cat_9_10: "Tuzos Kids (9-10)",
+      cat_11_12: "Tuzos Inicial (11-12)",
+      cat_13_15: "Tuzos Sub-15 (13-15)",
+      cat_sub18_tuzos: "Tuzos Sub-18",
       genuine: "Tuzos Genuine",
     },
     actividades_items: {
@@ -28,7 +26,7 @@ export const es = {
       calendario: "Calendario general",
     },
     convocatorias_items: {
-      unete: "Conviértete en Tuzos C.d Carmen",
+      unete: "Sé parte de Tuzos Carmen",
       visorias: "Visorias oficiales",
     },
     nosotros_items: {
@@ -56,7 +54,7 @@ export const es = {
     cta_secondary: "Ver Categorías",
     stat_1_value: "150+",
     stat_1_label: "Jugadores",
-    stat_2_value: "9",
+    stat_2_value: "7",
     stat_2_label: "Categorías",
     stat_3_value: "",
     stat_3_label: "Entrenadores certificados",
@@ -72,56 +70,43 @@ export const es = {
     ver_mas: "Ver más",
     genuine_badge: "Inclusión",
     cats: [
-      {
-        age: "4-5 años",
-        name: "Baby Tuzos",
-        desc: "Psicomotricidad, coordinación y amor al balón en un ambiente completamente lúdico.",
-        players: "20+",
-      },
-      {
-        age: "6-7 años",
-        name: "Mini Tuzos",
-        desc: "Primeros fundamentos técnicos: conducción, pase básico y juego en equipo.",
-        players: "25+",
-      },
-      {
-        age: "8-9 años",
-        name: "Tuzos Kids",
-        desc: "Técnica individual, rondos y juegos reducidos para potenciar habilidades.",
-        players: "28+",
-      },
-      {
-        age: "10-11 años",
-        name: "Tuzos Inicial",
-        desc: "Táctica básica, posicionamiento y participación en torneos locales.",
-        players: "30+",
-      },
-      {
-        age: "12-13 años",
-        name: "Tuzos Desarrollo",
-        desc: "Competición regional, desarrollo físico y modelo de juego Tuzos.",
-        players: "26+",
-      },
-      {
-        age: "14-15 años",
-        name: "Tuzos Formación",
-        desc: "Alto rendimiento, preparación para divisiones superiores y formación integral.",
-        players: "22+",
-      },
-      {
-        age: "16-17 años",
-        name: "Tuzos Juvenil",
-        desc: "Desarrollo técnico avanzado y formación táctica para jugadores de alto potencial.",
-        players: "15+",
-      },
-      {
-        age: "Sub-18",
-        name: "Sub-18 Tuzos",
-        desc: "Máximo rendimiento y preparación para visorias oficiales de fuerzas básicas del Club Pachuca.",
-        players: "20+",
-      },
-    ],
+  {
+    age: "5-6",
+    name: "Baby Tuzos",
+    desc: "Introducción al fútbol",
+    schedule: "Martes y Jueves 16:30 a 17:30",
   },
+  {
+    age: "7-8",
+    name: "Tuzos Kids",
+    desc: "Formación básica",
+    schedule: "Martes y Jueves 16:30 a 17:30",
+  },
+  {
+    age: "9-10",
+    name: "Tuzos Inicial",
+    desc: "Desarrollo técnico",
+    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+  },
+  {
+    age: "11-12",
+    name: "Tuzos Formación",
+    desc: "Perfeccionamiento",
+    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+  },
+  {
+    age: "13-15",
+    name: "Tuzos Desarrollo",
+    desc: "Alto rendimiento",
+    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+  },
+  {
+    age: "sub-18",
+    name: "Sub-18 Tuzos",
+    desc: "Competitivo",
+    schedule: "Lunes, Miércoles y Viernes 16:30 a 18:00",
+  },
+],
 
   genuine: {
     section_badge: "Inclusión Social",
@@ -140,6 +125,7 @@ export const es = {
     date_label: "21 de Marzo",
     date_desc: "Día Mundial del Síndrome de Down",
     cta: "Conoce más sobre Genuine",
+    cta: "Entrenamos Martes y Jueves de 16:30 a 17:30 pm"
   },
 
   actividades: {
@@ -347,7 +333,7 @@ export const es = {
     nav_title: "Navegación",
     contact_title: "Contacto",
     social_title: "Redes Sociales",
-    copyright: "© 2025 Tuzos Cd. del Carmen. Todos los derechos reservados.",
+    copyright: "© 2025 Tuzos Carmen. Todos los derechos reservados.",
     affiliation: "Escuela filial oficial de Tuzos Pachuca.",
   },
 } as const

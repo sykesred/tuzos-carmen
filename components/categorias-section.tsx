@@ -3,7 +3,7 @@
 import { useLanguage } from "@/lib/i18n/index"
 import { es } from "@/lib/i18n/es"
 import { en } from "@/lib/i18n/en"
-import { Users, MessageCircle, Heart } from "lucide-react"
+import { MessageCircle, Heart } from "lucide-react"
 
 const WHATSAPP_BASE = "https://wa.me/529382780560?text="
 
@@ -11,20 +11,19 @@ type CatItem = {
   age: string
   name: string
   desc: string
-  players: string
+  schedule: string
 }
 
 const ACCENT_GRADIENT = "from-[#6d28d9] to-[#f97316]"
 
 const CAT_IDS = [
-  "cat-4-5",
-  "cat-6-7",
-  "cat-8-9",
-  "cat-10-11",
-  "cat-12-13",
-  "cat-14-15",
+  "cat-5-6",
+  "cat-7-8",
+  "cat-9-10",
+  "cat-11-12",
+  "cat-sub15",
   "cat-sub18",
-  "cat-sub18-tuzos",
+  "cat-genuine",
 ]
 
 export function CategoriasSection() {
@@ -163,7 +162,9 @@ export function CategoriasSection() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs text-blue-500 dark:text-muted-foreground">
                     <Users size={14} />
-                    <span>{cat.players} {lang === "en" ? "players" : "jugadores"}</span>
+                    <span className="flex items-center gap-1.5 text-xs text-blue-500 dark:text-muted-foreground">
+                      🕒 {cat.schedule}
+                    </span>
                   </div>
                   <a
                     href={`${WHATSAPP_BASE}${encodeURIComponent(`Hola, quisiera información sobre inscripciones en ${cat.name} (${cat.age}).`)}`}
