@@ -30,7 +30,7 @@ export async function sendEmail({
 
     await transporter.sendMail({
       from: `"Tuzos Carmen ⚽" <${process.env.EMAIL_USER}>`,
-      to: to.join(","), // importante
+      to: to.join(","), // importante para múltiples destinatarios
       subject,
       text, // fallback
       html, // diseño bonito
