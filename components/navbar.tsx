@@ -71,11 +71,6 @@ function useNavItems(): NavItem[] {
       ],
     },
     {
-      key: "patrocinios",
-      label: t("nav.patrocinios"),
-      href: "/patrocinios",
-    },
-    {
       key: "contacto",
       label: t("nav.contacto"),
       href: "/contacto",

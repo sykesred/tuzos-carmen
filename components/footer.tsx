@@ -60,7 +60,6 @@ export function Footer() {
     { label: t("nav.nosotros"), href: "/nosotros" },
     { label: t("nav.categorias"), href: "/categorias" },
     { label: t("nav.convocatorias"), href: "/convocatorias" },
-    { label: t("nav.patrocinios"), href: "/patrocinios" },
     { label: t("nav.contacto"), href: "/contacto" },
   ]
 
