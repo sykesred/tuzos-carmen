@@ -18,6 +18,7 @@ export async function sendEmail({
   text,
   html,
   ics,
+  cc,
 }: {
   to: string[]
   subject: string
