@@ -5,6 +5,7 @@ import FullCalendar from "@fullcalendar/react"
 import dayGridPlugin from "@fullcalendar/daygrid"
 import interactionPlugin from "@fullcalendar/interaction"
 import { useLanguage } from "@/lib/i18n/index"
+import Swal from "sweetalert2"
 
 const CATEGORIES = [
   { value: "5-6", label: "Baby Tuzos" },
@@ -107,14 +108,39 @@ export default function BookingCalendar() {
       console.log("data:", data)
 
       if (res.ok) {
-        alert("Clase agendada correctamente ⚽")
+        Swal.fire({
+          icon: "success",
+          title: "Tuzos Carmen ⚽",
+          html: `
+          <p><strong>Tu clase muestra se agendó correctamente</strong></p>
+          <p>📩 Enviamos la confirmación al correo que proporcionaste.</p>
+          <p>⚠️ Revisa spam si no aparece en bandeja principal.</p>
+          <p>¡Te esperamos en la cancha!</p>
+          `,
+          confirmButtonText: "¡Genial!",
+          confirmButtonColor: "#ed742e", // Naranja Tuzos
+          background: "#f5faff", // Fondo claro
+          color: "#0b2472", // Texto oscuro
+        })
       } else {
         console.error(data)
-        alert("Error al agendar")
+        await Swal.fire({
+          icon: "error",
+          title: "Error al agendar",
+          text: data.error || "Ocurrió un error al agendar tu clase muestra. Por favor, inténtalo de nuevo.",
+          confirmButtonText: "Entendido",
+          confirmButtonColor: "#ed742e", // Naranja Tuzos
+        })
       }
     } catch (err) {
       console.error(err)
-      alert("Error en la solicitud")
+      await Swal.fire({
+        icon: "error",
+        title: "Error en la solicitud",
+        text: "Ocurrió un error al procesar tu solicitud. Por favor, inténtalo de nuevo.",
+        confirmButtonText: "Entendido",
+        confirmButtonColor: "#ed742e", // Naranja Tuzos
+      })
     }
   }
 
