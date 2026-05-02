@@ -15,18 +15,6 @@ const TORNEO_GRADIENTS = [
   "from-[#0b2472]/80 to-[#c55a1f]",
 ]
 
-// ─── Gallery images ─────────────────────────────────────────────
-const GALLERY_IMAGES = [
-  "/images/tuzos1.jpg",
-  "/images/tuzos2.jpg",
-  "/images/tuzos3.jpg",
-  "/images/tuzos4.jpg",
-  "/images/tuzos5.jpg",
-  "/images/tuzos6.jpg",
-  "/images/tuzos7.jpg",
-  "/images/tuzos8.jpg",
-]
-
 // ─── Animated soccer balls ──────────────────────────────────────
 const BALL_VARIANTS = [
   { bg: "#ed742e", patch: "#0b2472", stroke: "#0b2472" },
@@ -139,40 +127,6 @@ export function NosotrosPage() {
       dir === "next" ? (i + 1) % torneosTotal : (i - 1 + torneosTotal) % torneosTotal
     )
   }
-
-  // ─── Gallery lightbox state ──────────────────────────────────
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
-
-  const openLightbox = (idx: number) => setLightboxIndex(idx)
-  const closeLightbox = () => setLightboxIndex(null)
-  const prevImage = () =>
-    setLightboxIndex((i) => (i === null ? null : (i - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length))
-  const nextImage = () =>
-    setLightboxIndex((i) => (i === null ? null : (i + 1) % GALLERY_IMAGES.length))
-
-  // Keyboard navigation for lightbox
-  useEffect(() => {
-    if (lightboxIndex === null) return
-    const handler = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeLightbox()
-      if (e.key === "ArrowLeft") prevImage()
-      if (e.key === "ArrowRight") nextImage()
-    }
-    window.addEventListener("keydown", handler)
-    return () => window.removeEventListener("keydown", handler)
-  }, [lightboxIndex])
-
-  // Prevent body scroll while lightbox is open
-  useEffect(() => {
-    if (lightboxIndex !== null) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
-    }
-    return () => {
-      document.body.style.overflow = ""
-    }
-  }, [lightboxIndex])
 
   return (
     <div>
@@ -411,103 +365,6 @@ export function NosotrosPage() {
         </div>
       </section>
 
-      {/* ── Gallery + Animated Balls ──────────────────────────────── */}
-      <section className="py-20 lg:py-28 bg-[#0b2472] relative overflow-hidden">
-        {/* Animated background balls */}
-        <AnimatedBalls />
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-[#ed742e]/20 border border-[#ed742e]/30 text-[#ed742e] text-xs font-bold uppercase tracking-widest mb-4">
-              {lang === "en" ? "Moments" : "Momentos"}
-            </span>
-            <h2 className="font-heading font-black text-3xl sm:text-4xl text-white mb-4">
-              {lang === "en" ? "Gallery" : "Galería"}
-            </h2>
-          </div>
-
-          {/* Image grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {GALLERY_IMAGES.map((src, idx) => (
-              <button
-                key={src}
-                onClick={() => openLightbox(idx)}
-                className="aspect-square overflow-hidden rounded-xl hover:scale-[1.03] transition-transform group relative focus:outline-none focus:ring-2 focus:ring-[#ed742e]"
-                aria-label={`Ver imagen ${idx + 1}`}
-              >
-                <img
-                  src={src}
-                  alt={`Galería Tuzos ${idx + 1}`}
-                  className="w-full h-full object-cover"
-                />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <ZoomIn size={28} className="text-white" />
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Lightbox ─────────────────────────────────────────────── */}
-      {lightboxIndex !== null && (
-        <div
-          className="fixed inset-0 z-[200] bg-black/90 flex items-center justify-center"
-          onClick={closeLightbox}
-        >
-          {/* Close */}
-          <button
-            onClick={closeLightbox}
-            className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors z-10"
-            aria-label="Cerrar"
-          >
-            <X size={20} className="text-white" />
-          </button>
-
-          {/* Prev */}
-          <button
-            onClick={(e) => { e.stopPropagation(); prevImage() }}
-            className="absolute left-4 w-11 h-11 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors z-10"
-            aria-label="Imagen anterior"
-          >
-            <ChevronLeft size={24} className="text-white" />
-          </button>
-
-          {/* Image */}
-          <div
-            className="relative max-w-[90vw] max-h-[85vh] flex items-center justify-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={GALLERY_IMAGES[lightboxIndex]}
-              alt={`Galería Tuzos ${lightboxIndex + 1}`}
-              className="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"
-            />
-          </div>
-
-          {/* Next */}
-          <button
-            onClick={(e) => { e.stopPropagation(); nextImage() }}
-            className="absolute right-4 w-11 h-11 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors z-10"
-            aria-label="Imagen siguiente"
-          >
-            <ChevronRight size={24} className="text-white" />
-          </button>
-
-          {/* Dots indicator */}
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
-            {GALLERY_IMAGES.map((_, i) => (
-              <button
-                key={i}
-                onClick={(e) => { e.stopPropagation(); setLightboxIndex(i) }}
-                className={`w-2 h-2 rounded-full transition-colors ${i === lightboxIndex ? "bg-[#ed742e]" : "bg-white/40"}`}
-                aria-label={`Ir a imagen ${i + 1}`}
-              />
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* ── Filosofía + Equipo + Visita ──────────────────────────── */}
       <section id="equipo" className="py-20 lg:py-28 bg-background scroll-mt-16">
