@@ -76,11 +76,6 @@ function useNavItems(): NavItem[] {
       href: "/galeria",
     },
     {
-      key: "patrocinios",
-      label: t("nav.patrocinios"),
-      href: "/patrocinios",
-    },
-    {
       key: "contacto",
       label: t("nav.contacto"),
       href: "/contacto",
