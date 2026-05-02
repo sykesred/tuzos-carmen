@@ -71,6 +71,19 @@ function useNavItems(): NavItem[] {
       ],
     },
     {
+<<<<<<< HEAD
+=======
+      key: "galeria",
+      label: t("nav.galeria"),
+      href: "/galeria",
+    },
+    {
+      key: "patrocinios",
+      label: t("nav.patrocinios"),
+      href: "/patrocinios",
+    },
+    {
+>>>>>>> f60945a (cambios del 2 de mayo (galería, boton ver categorias, modo oscuro y colores))
       key: "contacto",
       label: t("nav.contacto"),
       href: "/contacto",

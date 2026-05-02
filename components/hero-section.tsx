@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/lib/i18n/index.tsx"
 import { MessageCircle, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 const WHATSAPP_URL =
   "https://wa.me/529382780560?text=Hola%2C%20me%20interesa%20inscribir%20a%20mi%20hijo%20en%20Tuzos%20Carmen."
@@ -72,13 +73,14 @@ export function HeroSection() {
               <MessageCircle size={20} />
               {t("hero.cta_primary")}
             </a>
-            <button
-              onClick={() => scrollTo("#categorias")}
-              className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-white/10 border border-white/20 text-white rounded-2xl font-semibold text-base hover:bg-white/20 active:scale-95 transition-all backdrop-blur-sm"
+            <Link
+              href="/categorias"
+              className="inline-flex items-center justify-center gap-2 px-6 py-4
+              bg-white/10 text-white rounded-2xl font-semibold text-base
+              hover:bg-white/20 active:scale-95 transition-all backdrop-blur-sm"
             >
-              {t("hero.cta_secondary")}
-              <ChevronRight size={18} />
-            </button>
+              Ver Categorías
+            </Link>
           </div>
         </div>
 

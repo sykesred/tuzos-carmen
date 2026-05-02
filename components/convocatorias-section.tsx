@@ -65,7 +65,7 @@ export function ConvocatoriasSection() {
                 <h3 className="font-heading font-black text-2xl sm:text-3xl text-white mb-2 text-balance">
                   {data.card_1_title}
                 </h3>
-                <p className="text-brand-sky font-semibold text-sm sm:text-base mb-3">
+                <p className="text-[#ed742e] dark:text-[#0b2472] font-semibold text-sm sm:text-base mb-3">
                   {data.card_1_tagline}
                 </p>
                 <p className="text-white/75 text-sm sm:text-base leading-relaxed">
@@ -77,7 +77,7 @@ export function ConvocatoriasSection() {
               <ul className="space-y-2.5">
                 {data.card_1_items.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-white/90">
-                    <Check size={16} className="text-brand-sky shrink-0 mt-0.5" />
+                    <Check size={16} className="text-[#ed742e] dark:text-[#0b2472] shrink-0 mt-0.5" />
                     {item}
                   </li>
                 ))}

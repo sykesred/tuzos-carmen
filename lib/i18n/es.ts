@@ -5,6 +5,7 @@ export const es = {
     nosotros: "Nosotros",
     actividades: "Actividades",
     convocatorias: "Convocatorias",
+    galeria: "Galería",
     sobre: "Sobre Nosotros",
     patrocinios: "Patrocinios",
     contacto: "Contacto",
@@ -60,7 +61,7 @@ export const es = {
     stat_3_value: "",
     stat_3_label: "Entrenadores certificados",
     stat_4_value: "",
-    stat_4_label: "Validez oficial ante Club Pachuca F.C",
+    stat_4_label: "Validez oficial ante Club Pachuca Tuzos",
   },
 
   categorias: {

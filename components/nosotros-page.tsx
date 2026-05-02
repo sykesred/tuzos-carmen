@@ -15,18 +15,7 @@ const TORNEO_GRADIENTS = [
   "from-[#0b2472]/80 to-[#c55a1f]",
 ]
 
-// ─── Gallery images ─────────────────────────────────────────────
-const GALLERY_IMAGES = [
-  "/images/tuzos1.jpg",
-  "/images/tuzos2.jpg",
-  "/images/tuzos3.jpg",
-  "/images/tuzos4.jpg",
-  "/images/tuzos5.jpg",
-  "/images/tuzos6.jpg",
-  "/images/tuzos7.jpg",
-  "/images/tuzos8.jpg",
-]
-
+// ─── Galería eliminada────────────────────────────────────────────
 // ─── Animated soccer balls ──────────────────────────────────────
 const BALL_VARIANTS = [
   { bg: "#ed742e", patch: "#0b2472", stroke: "#0b2472" },

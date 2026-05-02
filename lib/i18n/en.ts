@@ -5,6 +5,7 @@ export const en = {
     nosotros: "About Us",
     actividades: "Activities",
     convocatorias: "Tryouts",
+    galeria: "Gallery",
     sobre: "About Us",
     patrocinios: "Sponsorships",
     contacto: "Contact",
@@ -60,7 +61,7 @@ export const en = {
     stat_3_value: "",
     stat_3_label: "Certified Coaches",
     stat_4_value: "",
-    stat_4_label: "Official recognition by Club Pachuca F.C",
+    stat_4_label: "Official recognition by Club Pachuca Tuzos",
   },
 
   categorias: {
