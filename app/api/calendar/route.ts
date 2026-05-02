@@ -107,9 +107,10 @@ export async function POST(req: Request) {
               ¡Te esperamos en Tuzos Carmen!
             </span>
           </div>
-
-          <p>¡Nos vemos pronto en Tuzos Carmen! ⚽</p>
-        </div>
+            <center>
+              <p>¡Nos vemos pronto en la cancha! ⚽</p>
+            </center>
+          </div>
 
         <div style="background:#F4F6F8; text-align:center; padding:15px; font-size:12px; color:#777;">
           © 2026 Tuzos Carmen
