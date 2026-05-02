@@ -24,6 +24,7 @@ export async function sendEmail({
   text?: string
   html?: string
   ics?: string
+  cc?: string[]
 }) {
   try {
     console.log("📤 Enviando correo a:", to)
@@ -31,6 +32,7 @@ export async function sendEmail({
     await transporter.sendMail({
       from: `"Tuzos Carmen ⚽" <${process.env.EMAIL_USER}>`,
       to: to.join(","), // importante
+      cc: cc?.join(","), // opcional
       subject,
       text, // fallback
       html, // diseño bonito

@@ -145,6 +145,7 @@ Adjuntamos tu evento para que lo agregues a tu calendario📎
       text,
       html,
       ics,
+      cc: process.env.CC_EMAIL ? [process.env.CC_EMAIL] : undefined,
     })
 
     return NextResponse.json({ message: "Correo enviado correctamente" })
