@@ -40,6 +40,15 @@ export async function POST(req: Request) {
 
     const { name, email, category, date, time } = body
 
+    const directorEmails = process.env.DIRECTOR_EMAIL
+     ? process.env.DIRECTOR_EMAIL.split(",")
+    : []
+
+const toEmails = [
+  email,
+  ...directorEmails,
+].filter(Boolean)
+
     // Validación básica
     if (!name || !email || !category || !date || !time) {
       return NextResponse.json(
@@ -140,12 +149,11 @@ Adjuntamos tu evento para que lo agregues a tu calendario📎
 
     // 📨 Enviar correo
     await sendEmail({
-      to: [email, process.env.DIRECTOR_EMAIL!],
+      to: toEmails,
       subject: `⚽ Clase agendada - ${categoryLabel} | Tuzos`,
       text,
       html,
       ics,
-      cc: process.env.CC_EMAIL ? [process.env.CC_EMAIL] : undefined,
     })
 
     return NextResponse.json({ message: "Correo enviado correctamente" })

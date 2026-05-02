@@ -18,22 +18,19 @@ export async function sendEmail({
   text,
   html,
   ics,
-  cc,
 }: {
   to: string[]
   subject: string
   text?: string
   html?: string
   ics?: string
-  cc?: string[]
 }) {
   try {
     console.log("📤 Enviando correo a:", to)
 
     await transporter.sendMail({
       from: `"Tuzos Carmen ⚽" <${process.env.EMAIL_USER}>`,
-      to: to.join(","), // importante
-      cc: cc?.join(","), // opcional
+      to: to.join(","), // importante para múltiples destinatarios
       subject,
       text, // fallback
       html, // diseño bonito
