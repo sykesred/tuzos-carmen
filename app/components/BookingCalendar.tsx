@@ -11,7 +11,7 @@ const CATEGORIES = [
   { value: "7-8", label: "Mini Tuzos" },
   { value: "9-10", label: "Tuzos Kids" },
   { value: "11-12", label: "Tuzos Inicial" },
-  { value: "13-15", label: "TuzosSub-15"},
+  { value: "13-15", label: "Tuzos Sub-15"},
   { value: "sub-18", label: "Tuzos Sub-18" },
   { value: "genuine", label: "Tuzos Genuine" },
 ]
