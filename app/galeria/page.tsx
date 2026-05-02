@@ -9,18 +9,63 @@ export default function GaleriaPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {/* Ejemplo */}
         <img
-          src="/galeria/img1.jpg"
-          alt="Tuzos entrenamiento"
+          src="/galeria/tuzos1.jpg"
+          alt="Torneo UFD bienvenida"
           className="w-full h-64 object-cover rounded-2xl"
         />
         <img
-          src="/galeria/img2.jpg"
-          alt="Partido"
+          src="/galeria/tuzos2.jpg"
+          alt="Primeras visorias en Tuzos Carmen"
           className="w-full h-64 object-cover rounded-2xl"
         />
         <img
-          src="/galeria/img3.jpg"
-          alt="Equipo"
+          src="/galeria/tuzos3.jpg"
+          alt="Categoría Genuine en Tuzos Carmen"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos4.jpg"
+          alt="Categopría Genuine en Tuzos Carmen"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos5.jpg"
+          alt="Equipo Tuzos Carmen en torneo UFD"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos6.jpg"
+          alt="Mascotas Tuzos Pachuca"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos7.jpg"
+          alt="Entrenamiento en Tuzos Carmen"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos8.jpg"
+          alt="Equipo Tuzos Carmen en estadio Hidalgo"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos9.jpg"
+          alt="Equipo Tuzos Carmen en torneo UFD"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos10.jpg"
+          alt="Equipo Tuzos Carmen en estadio Hidalgo"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos11.jpg"
+          alt="Tuzito en torneo UFD"
+          className="w-full h-64 object-cover rounded-2xl"
+        />
+         <img
+          src="/galeria/tuzos12.jpg"
+          alt="Calentamiento para torneo UFD"
           className="w-full h-64 object-cover rounded-2xl"
         />
       </div>
