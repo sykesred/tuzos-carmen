@@ -45,7 +45,7 @@ export const en = {
   },
 
   hero: {
-    badge: "Official Affiliate School · Tuzos Pachuca",
+    badge: "Official Affiliate School · Tuzos Carmen",
     heading_1: "Shaping the",
     heading_2: "Champions",
     heading_3: "of Tomorrow",
@@ -147,7 +147,7 @@ export const en = {
       },
       {
         title: "Training",
-        desc: "Three weekly sessions with professional methodology based on the Tuzos Pachuca playing model.",
+        desc: "Three weekly sessions with professional methodology based on the Tuzos Carmen playing model.",
       },
       {
         title: "Friendly Matches",
@@ -225,18 +225,18 @@ export const en = {
     torneos_title: "Tournaments We Participate In",
     torneos_subtitle: "Competitions where we represent Ciudad del Carmen",
     torneos_items: [
-      { name: "Torneo GP", location: "Pachuca, Hgo." },
-      { name: "Liga Cantera", location: "Cd. Carmen" },
-      { name: "Liga Golden Plus", location: "Cd. Carmen" },
-      { name: "Super Copa Jaguar Mérida", location: "Mérida, Yuc." },
-      { name: "Copa Cancún", location: "Cancún, Q.R." },
+      { name: "Torneo Internacional UFD", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.jpg" },
+      { name: "Grupo Pachuca-León", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.jpeg" },
+      { name: "Liga Golden Jaguar Mérida", location: "Mérida, Yuc.", image: "/images/torneos/ligagolden.png" },
+      { name: "Super Copa Jaguar", location: "Mérida, Yuc.", image: "/images/torneos/copa_jaguar.jpeg" },
+      { name: "Copa Cancún", location: "Cancún, Q.R.", image: "/images/torneos/copa_cancun.jpg" },
     ],
 
     slogan: "The stars are our children",
 
     filosofia_title: "Institutional Philosophy",
     filosofia_desc:
-      "We believe in the holistic development of the player: discipline, teamwork, respect and consistency are the pillars of our school. We follow the Tuzos Pachuca playing model.",
+      "We believe in the holistic development of the player: discipline, teamwork, respect and consistency are the pillars of our school. We follow the Tuzos Carmen playing model.",
 
     equipo_title: "Meet the Team",
     equipo_highlight:
@@ -303,7 +303,7 @@ export const en = {
       "We are more than a soccer school: we are a family that shapes champions on and off the pitch",
     filosofia_title: "Institutional Philosophy",
     filosofia_desc:
-      "We believe in the holistic development of the player: discipline, teamwork, respect and consistency are the pillars of our school. We follow the Tuzos Pachuca playing model.",
+      "We believe in the holistic development of the player: discipline, teamwork, respect and consistency are the pillars of our school. We follow the Tuzos Carmen playing model.",
     equipo_title: "Meet the Team",
     equipo_desc:
       "Our certified coaches hold credentials from the Mexican Football Federation with extensive experience in developing Tuzobrinos. Our staff is committed to every student's growth.",
@@ -345,6 +345,6 @@ export const en = {
     contact_title: "Contact",
     social_title: "Social Media",
     copyright: "© 2025 Tuzos Carmen. All rights reserved.",
-    affiliation: "Official affiliate school of Tuzos Pachuca.",
+    affiliation: "Official affiliate school of Tuzos Carmen.",
   },
 } as const

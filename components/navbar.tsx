@@ -162,7 +162,7 @@ export function Navbar() {
             <div className="w-[86px] h-[86px] rounded-full bg-white flex items-center justify-center shadow-2xl shadow-black/25 flex-shrink-0 group-hover:scale-105 transition-transform border-[3px] border-white/80">
               <Image
                 src="/images/logo-tuzos.png"
-                alt="Tuzos Ciudad del Carmen"
+                alt="Tuzos Carmen"
                 width={76}
                 height={76}
                 className="object-contain"
@@ -171,10 +171,7 @@ export function Navbar() {
             </div>
             <div className="flex flex-col leading-tight">
               <span className="font-heading font-black text-base leading-none text-white">
-                Tuzos
-              </span>
-              <span className="text-[10px] font-medium leading-none text-white/70">
-                Cd. del Carmen
+                Tuzos Carmen
               </span>
             </div>
           </Link>

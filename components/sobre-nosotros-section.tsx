@@ -121,7 +121,7 @@ export function SobreNosotrosSection() {
               Tuzos Carmen
             </p>
             <p className="text-xs text-muted-foreground">
-              Escuela filial oficial · Tuzos Pachuca · Liga MX
+              Escuela filial oficial · Tuzos Carmen · Liga MX
             </p>
           </div>
         </div>

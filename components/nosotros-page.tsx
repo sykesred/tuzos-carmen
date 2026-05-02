@@ -17,13 +17,14 @@ const TORNEO_GRADIENTS = [
 
 // ─── Gallery images ─────────────────────────────────────────────
 const GALLERY_IMAGES = [
-  "/images/equipo.jpeg",
-  "/images/equipo.png",
-  "/images/filosofia.png",
-  "/images/trofeo.png",
-  "/images/visitanos.png",
-  "/images/playera-front.png",
-  "/images/playera-back.png",
+  "/images/tuzos1.jpg",
+  "/images/tuzos2.jpg",
+  "/images/tuzos3.jpg",
+  "/images/tuzos4.jpg",
+  "/images/tuzos5.jpg",
+  "/images/tuzos6.jpg",
+  "/images/tuzos7.jpg",
+  "/images/tuzos8.jpg",
 ]
 
 // ─── Animated soccer balls ──────────────────────────────────────
@@ -350,7 +351,6 @@ export function NosotrosPage() {
                 const idx = (activeIdx + offset + torneosTotal) % torneosTotal
                 const torneo = data.torneos_items[idx]
                 const isCenter = offset === 0
-                const isPachuca = idx === 0
 
                 return (
                   <div
@@ -363,21 +363,10 @@ export function NosotrosPage() {
                     onClick={!isCenter ? () => setActiveIdx(idx) : undefined}
                   >
                     {/* Card image area */}
-                    <div
-                      className={`h-48 flex items-center justify-center relative overflow-hidden
-                        ${isPachuca
-                          ? "bg-white"
-                          : `bg-gradient-to-br ${TORNEO_GRADIENTS[idx % TORNEO_GRADIENTS.length]}`
-                        }`}
-                    >
-                      {isPachuca && isCenter && (
-                        <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-[#ed742e] text-white text-[10px] font-bold uppercase tracking-wide shadow-md">
-                          ★ Destacado
-                        </div>
-                      )}
+                    <div className={`h-48 flex items-center justify-center relative overflow-hidden bg-gradient-to-br ${TORNEO_GRADIENTS[idx % TORNEO_GRADIENTS.length]}`}>
                       <img
-                        src="/images/trofeo.png"
-                        alt="Trofeo"
+                        src={torneo.image}
+                        alt={torneo.name}
                         className={`object-contain drop-shadow-xl transition-all duration-500 ${isCenter ? "h-36" : "h-28"}`}
                       />
                     </div>

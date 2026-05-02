@@ -23,14 +23,14 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Tuzos Carmen | Escuela de Fútbol Juvenil',
   description:
-    'Escuela filial oficial de Tuzos Pachuca en Ciudad del Carmen, Campeche. Formación deportiva profesional para niños y jóvenes de 4 a 18 años.',
+    'Escuela filial oficial de Tuzos Carmen en Ciudad del Carmen, Campeche. Formación deportiva profesional para niños y jóvenes de 4 a 18 años.',
   keywords: [
     'Tuzos',
     'fútbol juvenil',
     'escuela de fútbol',
     'Ciudad del Carmen',
     'Campeche',
-    'Tuzos Pachuca',
+    'Tuzos Carmen',
   ],
   authors: [{ name: 'Tuzos Carmen' }],
   openGraph: {

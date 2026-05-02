@@ -45,7 +45,7 @@ export const es = {
   },
 
   hero: {
-    badge: "Escuela Filial Oficial · Tuzos Pachuca",
+    badge: "Escuela Filial Oficial · Tuzos Carmen",
     heading_1: "Formando los",
     heading_2: "Campeones",
     heading_3: "del Futuro",
@@ -142,7 +142,7 @@ export const es = {
       },
       {
         title: "Entrenamientos",
-        desc: "Tres sesiones semanales con metodología profesional basada en el modelo de juego Tuzos Pachuca.",
+        desc: "Tres sesiones semanales con metodología profesional basada en el modelo de juego Tuzos Carmen.",
       },
       {
         title: "Partidos Amistosos",
@@ -171,7 +171,7 @@ export const es = {
       "Uniformes oficiales",
       "Grupos limitados por categoría",
     ],
-    card_1_affiliation: "Pertenecemos a la estructura de las escuelas filiales del club pachuca",
+    card_1_affiliation: "Pertenecemos a la estructura de las escuelas filiales del Club Pachuca",
     card_2_title: "Visorias Oficiales",
     card_2_desc:
       "Detectamos talento para las categorías competitivas. Si tu jugador tiene nivel, puede unirse a nuestros equipos de representación y competir a nivel regional.",
@@ -220,18 +220,18 @@ export const es = {
     torneos_title: "Torneos a Participar",
     torneos_subtitle: "Competencias en las que representamos a Ciudad del Carmen",
     torneos_items: [
-      { name: "Torneo GP", location: "Pachuca, Hgo." },
-      { name: "Liga Cantera", location: "Cd. Carmen" },
-      { name: "Liga Golden Plus", location: "Cd. Carmen" },
-      { name: "Super Copa Jaguar Mérida", location: "Mérida, Yuc." },
-      { name: "Copa Cancún", location: "Cancún, Q.R." },
+      { name: "Torneo Internacional UFD", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.jpg" },
+      { name: "Grupo Pachuca-León", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.jpeg" },
+      { name: "Liga Golden Jaguar Mérida", location: "Mérida, Yuc.", image: "/images/torneos/ligagolden.png" },
+      { name: "Super Copa Jaguar", location: "Mérida, Yuc.", image: "/images/torneos/copa_jaguar.jpeg" },
+      { name: "Copa Cancún", location: "Cancún, Q.R.", image: "/images/torneos/copa_cancun.jpg" },
     ],
 
     slogan: "Las estrellas son nuestros niños",
 
     filosofia_title: "Filosofía Institucional",
     filosofia_desc:
-      "Creemos en la formación integral del jugador: disciplina, trabajo en equipo, respeto y constancia son los pilares de nuestra escuela. Seguimos el modelo de juego de Tuzos Pachuca.",
+      "Creemos en la formación integral del jugador: disciplina, trabajo en equipo, respeto y constancia son los pilares de nuestra escuela. Seguimos el modelo de juego de Tuzos Carmen.",
 
     equipo_title: "Conoce al Equipo",
     equipo_highlight:
@@ -298,7 +298,7 @@ export const es = {
       "Somos más que una escuela de fútbol: somos una familia que forma campeones dentro y fuera de la cancha",
     filosofia_title: "Filosofía Institucional",
     filosofia_desc:
-      "Creemos en la formación integral del jugador: disciplina, trabajo en equipo, respeto y constancia son los pilares de nuestra escuela. Seguimos el modelo de juego de Tuzos Pachuca.",
+      "Creemos en la formación integral del jugador: disciplina, trabajo en equipo, respeto y constancia son los pilares de nuestra escuela. Seguimos el modelo de juego de Tuzos Carmen.",
     equipo_title: "Conoce al Equipo",
     equipo_desc:
       "Contamos con entrenadores certificados por la Federación Mexicana de Fútbol con experiencia en formación de tuzobrinos. Nuestro staff está comprometido con el desarrollo de cada alumno.",
@@ -340,6 +340,6 @@ export const es = {
     contact_title: "Contacto",
     social_title: "Redes Sociales",
     copyright: "© 2025 Tuzos Carmen. Todos los derechos reservados.",
-    affiliation: "Escuela filial oficial de Tuzos Pachuca.",
+    affiliation: "Escuela filial oficial de Tuzos Carmen.",
   },
 } as const

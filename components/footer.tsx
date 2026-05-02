@@ -92,7 +92,7 @@ export function Footer() {
                 href={WHATSAPP_INFO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-5 py-3 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-sm rounded-xl transition-all hover:scale-[1.03] active:scale-95"
+                className="flex items-center justify-center gap-2 px-5 py-3 bg-[#ed742e] hover:bg-[#c55a1f] text-white font-semibold text-sm rounded-xl transition-all hover:scale-[1.03] active:scale-95"
               >
                 <MessageCircle size={17} />
                 Más información
@@ -109,17 +109,14 @@ export function Footer() {
             <Link href="/" className="flex items-center gap-2.5 w-fit group">
               <Image
                 src="/images/logo-tuzos.png"
-                alt="Tuzos Ciudad del Carmen"
+                alt="Tuzos Carmen"
                 width={48}
                 height={48}
                 className="shrink-0 group-hover:scale-105 transition-transform drop-shadow-md mix-blend-lighten"
               />
               <div className="flex flex-col leading-tight">
                 <span className="font-heading font-black text-lg text-white leading-none">
-                  Tuzos
-                </span>
-                <span className="text-xs text-white/50 leading-none">
-                  Cd. del Carmen
+                  Tuzos Carmen
                 </span>
               </div>
             </Link>
