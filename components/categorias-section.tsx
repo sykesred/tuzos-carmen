@@ -161,7 +161,6 @@ export function CategoriasSection() {
                 {/* Footer row */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-xs text-[#0b2472] dark:text-muted-foreground">
-                    <Users size={14} />
                     <span className="flex items-center gap-1.5 text-xs text-blue-500 dark:text-muted-foreground">
                       🕒 {cat.schedule}
                     </span>
