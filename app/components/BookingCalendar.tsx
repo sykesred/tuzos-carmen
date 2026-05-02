@@ -64,7 +64,7 @@ export default function BookingCalendar() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
 
-  const slots = ["16:00", "17:00", "18:00", "19:00"]
+  const slots = ["16:30", "17:30", "18:00", "19:00"]
 
   const isWeekend = (dateStr: string) => {
     const day = new Date(dateStr + "T00:00:00").getDay()

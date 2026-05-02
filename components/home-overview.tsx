@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useLanguage } from "@/lib/i18n/index"
-import { Users, Trophy, Star, Heart, ArrowRight } from "lucide-react"
+import { Users, Trophy, Star, ArrowRight } from "lucide-react"
 
 
 export function HomeOverview() {
@@ -41,17 +41,6 @@ export function HomeOverview() {
       titleEn: "Enrollment",
       descEs: "Inscríbete o solicita clase de prueba.",
       descEn: "Enroll or request an official tryout for your player.",
-    },
-    {
-      icon: Heart,
-      href: "/patrocinios",
-      color: "text-[#0b2472] dark:text-brand-light",
-      bg: "bg-[#0b2472]/10 dark:bg-brand-light/10",
-      border: "border-[#0b2472]/20 hover:border-[#0b2472]/40 dark:border-brand-light/20 dark:hover:border-brand-light/40",
-      titleEs: "Patrocinios",
-      titleEn: "Sponsorships",
-      descEs: "Apoya el desarrollo deportivo y lleva tu marca al campo.",
-      descEn: "Support youth sports development and bring your brand to the field.",
     },
   ]
 

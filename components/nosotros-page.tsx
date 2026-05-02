@@ -604,7 +604,7 @@ export function NosotrosPage() {
                 </div>
               </div>
               <a
-                href="https://maps.google.com/?q=Ciudad+del+Carmen,+Campeche"
+                href="https://maps.app.goo.gl/xFjfgKYrCo3wSifG7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-3 inline-flex items-center gap-2 px-8 py-3 rounded-full bg-[#ed742e] hover:bg-[#c55a1f] text-white font-bold text-sm transition-colors shadow-lg"
