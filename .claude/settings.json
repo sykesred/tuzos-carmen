@@ -4,7 +4,12 @@
       "Bash(git config *)",
       "Bash(npm install *)",
       "Bash(grep -i -E \"\\\\.\\(jpg|jpeg|png|webp\\)$\")",
-      "Bash(xargs -0 grep -l \"posibilidad de ascenso\\\\|Possibility of promotion\")"
+      "Bash(xargs -0 grep -l \"posibilidad de ascenso\\\\|Possibility of promotion\")",
+      "Bash(rm \"c:/Users/lupit/Music/tuzos/app/api/leads/route.ts\")",
+      "Bash(rmdir \"c:/Users/lupit/Music/tuzos/app/api/leads\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\lupit\\Music\\tuzos\\scripts"
     ]
   }
 }

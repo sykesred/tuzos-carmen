@@ -12,12 +12,6 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=3000
-      - TWILIO_ACCOUNT_SID=${TWILIO_ACCOUNT_SID}
-      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
-      - TWILIO_PHONE_NUMBER=${TWILIO_PHONE_NUMBER}
-      - LEADS_SECRET=${LEADS_SECRET}
-    volumes:
-      - leads-data:/app/data
     expose:
       # Solo expuesto dentro de la red Docker (ngrok lo alcanza, no el host)
       - "3000"
@@ -58,5 +52,3 @@ networks:
   tuzos-net:
     driver: bridge
 
-volumes:
-  leads-data:
