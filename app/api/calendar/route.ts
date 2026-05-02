@@ -89,6 +89,11 @@ export async function POST(req: Request) {
 
           <p>Tu clase muestra ha sido agendada correctamente ⚽</p>
 
+          <p> Por favor imprime este comprobante como referencia para tu clase muestra. Recuerda presentarlo al llegar a Tuzos Carmen, llegar 10 minutos antes y traer ropa cómoda, agua y ganas de divertirte ⚽</p>
+
+          <p>Este comprobante es válido solo para la clase muestra agendada. Si deseas agendar otra clase muestra, por favor completa el formulario nuevamente.</p>
+
+
           <div style="background:#F0F4FF; padding:18px; border-radius:10px; border-left:5px solid #ed742e; margin:20px 0;">
             <p style="margin:6px 0;">📅 <strong>Fecha:</strong> ${fechaBonita}</p>
             <p style="margin:6px 0;">⏰ <strong>Hora:</strong> ${horaBonita}</p>
