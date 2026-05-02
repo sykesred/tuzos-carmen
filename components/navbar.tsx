@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
-import { useLanguage } from "@/lib/i18n/index.tsx"
+import { useLanguage } from "@/lib/i18n/index"
 import { cn } from "@/lib/utils"
 import {
   Menu,
@@ -71,8 +71,6 @@ function useNavItems(): NavItem[] {
       ],
     },
     {
-<<<<<<< HEAD
-=======
       key: "galeria",
       label: t("nav.galeria"),
       href: "/galeria",
@@ -83,7 +81,6 @@ function useNavItems(): NavItem[] {
       href: "/patrocinios",
     },
     {
->>>>>>> f60945a (cambios del 2 de mayo (galería, boton ver categorias, modo oscuro y colores))
       key: "contacto",
       label: t("nav.contacto"),
       href: "/contacto",
