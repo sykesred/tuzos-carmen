@@ -3,15 +3,15 @@ import { sendEmail } from "@/lib/mailer"
 
 // 🎯 Mapeo de categorías (value → label bonito)
 const CATEGORY_LABELS: Record<string, string> = {
-  "4-5": "Baby Tuzos (4-5 años)",
-  "6-7": "Mini Tuzos (6-7 años)",
-  "8-9": "Tuzos Kids (8-9 años)",
-  "10-11": "Tuzos Inicial (10-11 años)",
-  "12-13": "Tuzos Desarrollo (12-13 años)",
-  "14-15": "Tuzos Formación (14-15 años)",
+  "5-6": "Baby Tuzos (5-6 años)",
+  "6-7": "Mini Tuzos (7-8 años)",
+  "8-9": "Tuzos Kids (9-10 años)",
+  "10-11": "Tuzos Initial (10-11 años)",
+  "12-13": "Tuzos Development (12-13 años)",
+  "sub-15": "Tuzos Sub-15",
   "sub-18": "Tuzos Sub-18",
   "genuine": "Tuzos Genuine",
-}
+  }
 
 // 📅 Generador de archivo ICS
 function generateICS(date: string, time: string) {
@@ -79,7 +79,7 @@ export async function POST(req: Request) {
     <div style="font-family: Arial, sans-serif; background:#F4F6F8; padding:30px;">
       <div style="max-width:600px; margin:auto; background:#FFFFFF; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.08);">
 
-        <div style="background:#0A1F44; color:white; padding:25px; text-align:center;">
+        <div style="background:#0b2472; color:white; padding:25px; text-align:center;">
           <h2 style="margin:0;">⚽ Tuzos Carmen</h2>
           <p style="margin:5px 0 0; font-size:14px;">Clase muestra agendada</p>
         </div>
@@ -89,7 +89,7 @@ export async function POST(req: Request) {
 
           <p>Tu clase muestra ha sido agendada correctamente ⚽</p>
 
-          <div style="background:#F0F4FF; padding:18px; border-radius:10px; border-left:5px solid #F97316; margin:20px 0;">
+          <div style="background:#F0F4FF; padding:18px; border-radius:10px; border-left:5px solid #ed742e; margin:20px 0;">
             <p style="margin:6px 0;">📅 <strong>Fecha:</strong> ${fechaBonita}</p>
             <p style="margin:6px 0;">⏰ <strong>Hora:</strong> ${horaBonita}</p>
             <p style="margin:6px 0;">👥 <strong>Categoría:</strong> ${categoryLabel}</p>
@@ -98,8 +98,8 @@ export async function POST(req: Request) {
           <p>Adjuntamos tu evento para que lo agregues a tu calendario 📎</p>
 
           <div style="text-align:center; margin:25px 0;">
-            <span style="display:inline-block; background:#F97316; color:white; padding:10px 18px; border-radius:6px;">
-              ¡Te esperamos en Tuzos!
+            <span style="display:inline-block; background:#ed742e; color:white; padding:10px 18px; border-radius:6px;">
+              ¡Te esperamos en Tuzos Carmen!
             </span>
           </div>
 
@@ -123,6 +123,11 @@ Tu clase muestra ha sido agendada correctamente ⚽
 Fecha: ${fechaBonita}
 Hora: ${horaBonita}
 Categoría: ${categoryLabel}
+Por favor imprime este comprobante como referencia para tu clase muestra. Recuerda presentarlo al llegar a Tuzos Carmen, llegar 10 minutos antes y traer ropa cómoda, agua y ganas de divertirte ⚽
+
+Este comprobante es válido solo para la clase muestra agendada. Si deseas agendar otra clase muestra, por favor completa el formulario nuevamente.
+
+Adjuntamos tu evento para que lo agregues a tu calendario📎
 
 ¡Te esperamos en Tuzos Carmen!
 `
