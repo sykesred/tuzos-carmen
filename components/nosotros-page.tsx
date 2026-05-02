@@ -16,10 +16,16 @@ const TORNEO_GRADIENTS = [
 ]
 
 
-export function NosotrosPage() {
+export default function NosotrosPage() {
   const { t, lang } = useLanguage()
   const translations = { es, en }
   const data = translations[lang].nosotrosPage
+
+  return (
+  <div className="text-white p-10">
+    Nosotros
+  </div>
+)
 
   // ─── Torneos carousel state ──────────────────────────────────
   const torneosTotal = data.torneos_items.length
@@ -34,18 +40,6 @@ export function NosotrosPage() {
     )
   }
 
-
-   // Prevent body scroll while lightbox is open
-  useEffect(() => {
-    if (lightboxIndex !== null) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
-    }
-    return () => {
-      document.body.style.overflow = ""
-    }
-  }, [lightboxIndex])
 
   return (
     <div>
@@ -346,7 +340,6 @@ export function NosotrosPage() {
             id="visita"
             className="mt-8 rounded-3xl overflow-hidden shadow-2xl border-2 border-[#ed742e]/40 bg-[#0b2472] scroll-mt-16 relative"
           >
-            <AnimatedBalls />
 
             {/* Photo */}
             <div className="relative z-10 py-12 flex justify-center bg-gradient-to-b from-white/5 to-transparent">
