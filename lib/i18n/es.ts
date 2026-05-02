@@ -242,7 +242,7 @@ export const es = {
     visita_desc:
       "Estamos ubicados en Ciudad del Carmen, Campeche. Entrenamos en un espacio seguro.",
     visita_address: "Ciudad del Carmen, Campeche, México",
-    visita_schedule: "Lun, Mié y Vie · 4:00 PM – 8:00 PM",
+    visita_schedule: "Lunes a Viernes · 4:00 PM – 8:00 PM",
     visita_cta: "Cómo llegar",
   },
 
@@ -306,7 +306,7 @@ export const es = {
     visita_desc:
       "Estamos ubicados en Ciudad del Carmen, Campeche. Entrenamos en un espacio seguro.",
     visita_address: "Ciudad del Carmen, Campeche, México",
-    visita_schedule: "Lun, Mié y Vie · 4:00 PM – 8:00 PM",
+    visita_schedule: "Lunes a Viernes · 4:00 PM – 8:00 PM",
     visita_cta: "Cómo llegar",
   },
 
