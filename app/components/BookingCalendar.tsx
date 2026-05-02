@@ -7,14 +7,12 @@ import interactionPlugin from "@fullcalendar/interaction"
 import { useLanguage } from "@/lib/i18n/index"
 
 const CATEGORIES = [
-  { value: "baby-tuzos", label: "Baby Tuzos (4-5 años)" },
-  { value: "mini-tuzos", label: "Mini Tuzos (6-7 años)" },
-  { value: "tuzos-kids", label: "Tuzos Kids (8-9 años)" },
-  { value: "tuzos-inicial", label: "Tuzos Inicial (10-11 años)" },
-  { value: "tuzos-desarrollo", label: "Tuzos Desarrollo (12-13 años)" },
-  { value: "tuzos-formacion", label: "Tuzos Formación (14-15 años)" },
-  { value: "tuzos-juvenil", label: "Tuzos Juvenil (16-17 años)" },
-  { value: "sub-18", label: "Sub-18 Tuzos" },
+  { value: "5-6", label: "Baby Tuzos" },
+  { value: "7-8", label: "Mini Tuzos" },
+  { value: "9-10", label: "Tuzos Kids" },
+  { value: "11-12", label: "Tuzos Inicial" },
+  { value: "13-15", label: "TuzosSub-15"},
+  { value: "sub-18", label: "Tuzos Sub-18" },
   { value: "genuine", label: "Tuzos Genuine" },
 ]
 
