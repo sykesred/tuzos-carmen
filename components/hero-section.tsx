@@ -81,6 +81,14 @@ export function HeroSection() {
             >
               Ver Categorías
             </Link>
+            <Link
+              href="/categorias#agenda-clase"
+              className="inline-flex items-center justify-center gap-2 px-6 py-4
+              bg-white/10 text-white rounded-2xl font-semibold text-base
+              hover:bg-white/20 active:scale-95 transition-all backdrop-blur-sm"
+            >
+              ⚽ Clase prueba gratis
+            </Link>
           </div>
         </div>
 

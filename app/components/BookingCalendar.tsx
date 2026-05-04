@@ -157,7 +157,7 @@ export default function BookingCalendar() {
   const stepsDone = [!!category, !!selectedDate, !!selectedTime, !!(name && email)]
 
   return (
-    <div className="booking-calendar-wrapper max-w-5xl mx-auto">
+    <div id="agenda-clase" className="booking-calendar-wrapper max-w-5xl mx-auto">
       {/* Progress steps */}
       <div className="flex items-center justify-center mb-8 gap-0">
         {tx.steps.map((label: string, i: number) => (
