@@ -230,7 +230,7 @@ export const en = {
       { name: "Grupo Pachuca-León International Tournament", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.jpeg", curiosity: "Held during the first week of August in León, Gto." },
       { name: "Copa Cancún", location: "Cancún, Q.Roo", image: "/images/torneos/copa_cancun.jpg", curiosity: "Takes place during the summer in Cancún, Q.Roo." },
       { name: "Super Copa Jaguar Tournament", location: "Mérida, Yucatán", image: "/images/torneos/copa_jaguar.jpeg", curiosity: "Venue: Mérida, Yucatán." },
-      { name: "Liga Golden Plus", location: "Ciudad del Carmen, Cam.", image: "/images/torneos/ligagolden.png", curiosity: "We play at home — Ciudad del Carmen!" },
+      { name: "Local Tournament", location: "Ciudad del Carmen, Cam.", image: "/images/torneos/ligagolden.png", curiosity: "We play at home — Ciudad del Carmen!" },
     ],
 
     slogan: "The stars are our children",

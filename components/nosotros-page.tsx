@@ -337,7 +337,7 @@ export function NosotrosPage() {
                             borderRadius: '3px',
                           }}
                         >
-                          {/* Front face — imagen cubre todo el espacio */}
+                          {/* Front face — imagen con relleno y fondo difuminado */}
                           <div
                             style={{
                               position: 'absolute',
@@ -346,12 +346,17 @@ export function NosotrosPage() {
                               WebkitBackfaceVisibility: 'hidden',
                               borderRadius: '3px',
                               overflow: 'hidden',
+                              background: 'radial-gradient(ellipse at 25% 75%, rgba(237,116,46,0.38) 0%, transparent 50%), radial-gradient(ellipse at 75% 25%, rgba(26,58,176,0.55) 0%, transparent 55%), #07102b',
+                              padding: '8px',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
                             }}
                           >
                             <img
                               src={torneo.image}
                               alt={torneo.name}
-                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                             />
                           </div>
 
