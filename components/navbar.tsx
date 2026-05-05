@@ -6,6 +6,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { useLanguage } from "@/lib/i18n/index"
+import { CATEGORIAS } from "@/lib/categorias"
 import { cn } from "@/lib/utils"
 import {
   Menu,
@@ -50,16 +51,10 @@ function useNavItems(): NavItem[] {
       key: "categorias",
       label: t("nav.categorias"),
       href: "/categorias",
-      items: [
-        { label: t("nav.categorias_items.cat_4_5"), href: "/categorias#cat-4-5" },
-        { label: t("nav.categorias_items.cat_6_7"), href: "/categorias#cat-6-7" },
-        { label: t("nav.categorias_items.cat_8_9"), href: "/categorias#cat-8-9" },
-        { label: t("nav.categorias_items.cat_10_11"), href: "/categorias#cat-10-11" },
-        { label: t("nav.categorias_items.cat_12_13"), href: "/categorias#cat-12-13" },
-        { label: t("nav.categorias_items.cat_sub15"), href: "/categorias#cat-sub15" },
-        { label: t("nav.categorias_items.cat_sub18"), href: "/categorias#cat-sub18" },
-        { label: t("nav.categorias_items.genuine"), href: "/categorias#genuine" },
-      ],
+      items: CATEGORIAS.map((cat) => ({
+        label: `${cat.emoji} ${cat.nombre} (${cat.edades})`,
+        href: `/categorias#${cat.id}`,
+  })),
     },
     {
       key: "convocatorias",
@@ -159,7 +154,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo — centered on the bar, overflows equally above & below */}
           <Link href="/" className="flex items-center gap-3 group overflow-visible">
-            <div className="w-[86px] h-[86px] rounded-full bg-white flex items-center justify-center shadow-2xl shadow-black/25 flex-shrink-0 group-hover:scale-105 transition-transform border-[3px] border-white/80">
+            <div className="w-21.5 h-21.5 rounded-full bg-white flex items-center justify-center shadow-2xl shadow-black/25 shrink-0 group-hover:scale-105 transition-transform border-[3px] border-white/80">
               <Image
                 src="/images/logo-tuzos.png"
                 alt="Tuzos Carmen"
