@@ -14,6 +14,13 @@ const BALL_VARIANTS = [
   { bg: "#ffffff", patch: "#0b2472", stroke: "#0b2472" },
 ]
 
+const TORNEO_GRADIENTS = [
+  "from-blue-500 to-blue-700",
+  "from-orange-400 to-orange-600",
+  "from-indigo-500 to-indigo-700",
+  "from-cyan-500 to-blue-600",
+]
+
 const BALLS = [
   { id: 0,  size: 45, left: "4%",  delay: "0s",    dur: "8s",    drift: 0  },
   { id: 1,  size: 28, left: "12%", delay: "2.4s",  dur: "11s",   drift: 1  },
@@ -307,108 +314,13 @@ export function NosotrosPage() {
                 return (
                   <div
                     key={offset}
-                    className={`transition-all duration-500 ease-in-out flex-shrink-0
+                    className={`transition-all duration-500 ease-in-out shrink-0
                       ${isCenter
                         ? "w-80 opacity-100 scale-100"
                         : "hidden sm:block sm:w-56 opacity-40 scale-95 cursor-pointer hover:opacity-60"
                       }`}
                     onClick={!isCenter ? () => setActiveIdx(idx) : undefined}
                   >
-<<<<<<< HEAD
-                    {/* Gradient border wrapper */}
-                    <div
-                      className="shadow-2xl"
-                      style={{
-                        borderRadius: '12px',
-                        padding: '3px',
-                        background: isCenter
-                          ? 'linear-gradient(135deg, #ed742e 0%, #0b2472 50%, #ed742e 100%)'
-                          : 'linear-gradient(135deg, #ed742e55 0%, #0b247255 100%)',
-                      }}
-                    >
-                      {/* Perspective + flip container */}
-                      <div style={{ perspective: '1200px' }}>
-                        <div
-                          style={{
-                            transformStyle: 'preserve-3d',
-                            transition: 'transform 0.85s cubic-bezier(0.645, 0.045, 0.355, 1)',
-                            transform: isCenter && isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
-                            position: 'relative',
-                            aspectRatio: '687 / 1024',
-                            borderRadius: '9px',
-                          }}
-                        >
-                          {/* Front face — imagen */}
-                          <div
-                            style={{
-                              position: 'absolute',
-                              inset: 0,
-                              backfaceVisibility: 'hidden',
-                              WebkitBackfaceVisibility: 'hidden',
-                              borderRadius: '9px',
-                              overflow: 'hidden',
-                            }}
-                          >
-                            <img
-                              src={torneo.image}
-                              alt={torneo.name}
-                              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                            />
-                          </div>
-
-                          {/* Back face — info (only rendered for center) */}
-                          {isCenter && (
-                            <div
-                              style={{
-                                position: 'absolute',
-                                inset: 0,
-                                backfaceVisibility: 'hidden',
-                                WebkitBackfaceVisibility: 'hidden',
-                                transform: 'rotateY(180deg)',
-                                background: 'linear-gradient(160deg, #061a5c 0%, #0b2472 100%)',
-                                borderRadius: '9px',
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                padding: '32px 28px',
-                                gap: '18px',
-                              }}
-                            >
-                              <span style={{
-                                color: '#ed742e',
-                                fontSize: '10px',
-                                fontWeight: 800,
-                                letterSpacing: '0.15em',
-                                textTransform: 'uppercase',
-                              }}>
-                                Dato curioso
-                              </span>
-                              <p style={{
-                                color: 'white',
-                                fontWeight: 900,
-                                fontSize: '20px',
-                                textAlign: 'center',
-                                lineHeight: '1.25',
-                                margin: 0,
-                              }}>
-                                {torneo.name}
-                              </p>
-                              <div style={{ width: '36px', height: '2px', background: 'linear-gradient(90deg, #ed742e, #0b2472)' }} />
-                              <p style={{
-                                color: 'rgba(255,255,255,0.85)',
-                                textAlign: 'center',
-                                fontSize: '15px',
-                                lineHeight: '1.6',
-                                margin: 0,
-                              }}>
-                                {torneo.curiosity}
-                              </p>
-                            </div>
-                          )}
-                        </div>
-                      </div>
-=======
                     {/* Card image area */}
                     <div className={`h-48 flex items-center justify-center relative overflow-hidden bg-linear-to-br ${TORNEO_GRADIENTS[idx % TORNEO_GRADIENTS.length]}`}>
                       <img
@@ -426,7 +338,6 @@ export function NosotrosPage() {
                         <MapPin size={11} className="text-[#ed742e] shrink-0" />
                         {torneo.location}
                       </p>
->>>>>>> acd460a (imagen torneo local)
                     </div>
                   </div>
                 )
