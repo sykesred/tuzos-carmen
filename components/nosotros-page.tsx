@@ -6,14 +6,6 @@ import { es } from "@/lib/i18n/es"
 import { en } from "@/lib/i18n/en"
 import { Heart, MapPin, Globe, Check, BookOpen, GraduationCap, ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react"
 
-// ─── Torneos carousel gradients ────────────────────────────────
-const TORNEO_GRADIENTS = [
-  "from-[#ed742e] to-[#c55a1f]",
-  "from-[#0b2472] to-[#1a3ab0]",
-  "from-[#c55a1f] to-[#0b2472]",
-  "from-[#1a3ab0] to-[#ed742e]",
-  "from-[#0b2472]/80 to-[#c55a1f]",
-]
 
 // ─── Animated soccer balls ──────────────────────────────────────
 const BALL_VARIANTS = [
@@ -118,10 +110,16 @@ export function NosotrosPage() {
   // ─── Torneos carousel state ──────────────────────────────────
   const torneosTotal = data.torneos_items.length
   const [activeIdx, setActiveIdx] = useState(0)
+  const [isFlipped, setIsFlipped] = useState(false)
   useEffect(() => {
-    const timer = setInterval(() => setActiveIdx((i) => (i + 1) % torneosTotal), 3500)
-    return () => clearInterval(timer)
-  }, [torneosTotal])
+    setIsFlipped(false)
+    const flipTimer = setTimeout(() => setIsFlipped(true), 3000)
+    const nextTimer = setTimeout(() => setActiveIdx((i) => (i + 1) % torneosTotal), 7000)
+    return () => {
+      clearTimeout(flipTimer)
+      clearTimeout(nextTimer)
+    }
+  }, [activeIdx, torneosTotal])
   const moveTorneo = (dir: "prev" | "next") => {
     setActiveIdx((i) =>
       dir === "next" ? (i + 1) % torneosTotal : (i - 1 + torneosTotal) % torneosTotal
@@ -293,14 +291,14 @@ export function NosotrosPage() {
             {/* Prev button */}
             <button
               onClick={() => moveTorneo("prev")}
-              className="absolute left-0 top-[45%] -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 rounded-full bg-[#ed742e] hover:bg-[#c55a1f] flex items-center justify-center shadow-lg transition-colors"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 rounded-full bg-[#ed742e] hover:bg-[#c55a1f] flex items-center justify-center shadow-lg transition-colors"
               aria-label="Anterior torneo"
             >
               <ChevronLeft size={20} className="text-white" />
             </button>
 
             {/* 3-card track */}
-            <div className="flex items-stretch justify-center gap-4 py-2 px-2">
+            <div className="flex items-center justify-center gap-4 py-2 px-2">
               {([-1, 0, 1] as const).map((offset) => {
                 const idx = (activeIdx + offset + torneosTotal) % torneosTotal
                 const torneo = data.torneos_items[idx]
@@ -309,30 +307,99 @@ export function NosotrosPage() {
                 return (
                   <div
                     key={offset}
-                    className={`transition-all duration-500 ease-in-out rounded-2xl overflow-hidden flex flex-col border
+                    className={`transition-all duration-500 ease-in-out flex-shrink-0
                       ${isCenter
-                        ? "w-80 opacity-100 ring-2 ring-[#ed742e]/70 shadow-2xl scale-100 border-[#ed742e]/30"
-                        : "hidden sm:flex sm:w-60 opacity-40 scale-95 cursor-pointer hover:opacity-55 border-white/10"
+                        ? "w-80 opacity-100 scale-100"
+                        : "hidden sm:block sm:w-56 opacity-40 scale-95 cursor-pointer hover:opacity-60"
                       }`}
                     onClick={!isCenter ? () => setActiveIdx(idx) : undefined}
                   >
-                    {/* Card image area */}
-                    <div className={`h-48 flex items-center justify-center relative overflow-hidden bg-gradient-to-br ${TORNEO_GRADIENTS[idx % TORNEO_GRADIENTS.length]}`}>
-                      <img
-                        src={torneo.image}
-                        alt={torneo.name}
-                        className={`object-contain drop-shadow-xl transition-all duration-500 ${isCenter ? "h-36" : "h-28"}`}
-                      />
-                    </div>
-                    {/* Card body */}
-                    <div className="p-5 flex flex-col gap-1 bg-white/5 flex-1">
-                      <p className="font-heading font-black text-base text-white leading-tight">
-                        {torneo.name}
-                      </p>
-                      <p className="text-xs text-white/50 flex items-center gap-1.5">
-                        <MapPin size={11} className="text-[#ed742e] shrink-0" />
-                        {torneo.location}
-                      </p>
+                    {/* Gradient border wrapper */}
+                    <div
+                      className="rounded-2xl shadow-2xl"
+                      style={{
+                        padding: '3px',
+                        background: isCenter
+                          ? 'linear-gradient(135deg, #ed742e 0%, #0b2472 50%, #ed742e 100%)'
+                          : 'linear-gradient(135deg, #ed742e60 0%, #0b247260 100%)',
+                      }}
+                    >
+                      {/* Perspective + flip container */}
+                      <div style={{ perspective: '1000px' }}>
+                        <div
+                          style={{
+                            transformStyle: 'preserve-3d',
+                            transition: 'transform 0.75s ease-in-out',
+                            transform: isCenter && isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+                            position: 'relative',
+                            height: isCenter ? '380px' : '300px',
+                            borderRadius: '13px',
+                          }}
+                        >
+                          {/* Front face — full-size image */}
+                          <div
+                            style={{
+                              position: 'absolute',
+                              inset: 0,
+                              backfaceVisibility: 'hidden',
+                              WebkitBackfaceVisibility: 'hidden',
+                              borderRadius: '13px',
+                              overflow: 'hidden',
+                            }}
+                          >
+                            <img
+                              src={torneo.image}
+                              alt={torneo.name}
+                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                          </div>
+
+                          {/* Back face — info (only rendered for center) */}
+                          {isCenter && (
+                            <div
+                              style={{
+                                position: 'absolute',
+                                inset: 0,
+                                backfaceVisibility: 'hidden',
+                                WebkitBackfaceVisibility: 'hidden',
+                                transform: 'rotateY(180deg)',
+                                background: 'linear-gradient(160deg, #061a5c 0%, #0b2472 100%)',
+                                borderRadius: '13px',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                padding: '28px 24px',
+                                gap: '14px',
+                              }}
+                            >
+                              <div style={{ width: '44px', height: '4px', background: '#ed742e', borderRadius: '2px' }} />
+                              <p style={{
+                                color: 'white',
+                                fontWeight: 900,
+                                fontSize: '19px',
+                                textAlign: 'center',
+                                lineHeight: '1.3',
+                              }}>
+                                {torneo.name}
+                              </p>
+                              <p style={{
+                                color: 'rgba(255,255,255,0.82)',
+                                textAlign: 'center',
+                                fontSize: '14.5px',
+                                lineHeight: '1.65',
+                              }}>
+                                {torneo.curiosity}
+                              </p>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '6px' }}>
+                                <MapPin size={13} style={{ color: '#ed742e', flexShrink: 0 }} />
+                                <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: '12px' }}>{torneo.location}</span>
+                              </div>
+                              <div style={{ width: '44px', height: '4px', background: '#0b2472', borderRadius: '2px', border: '1px solid #ed742e50' }} />
+                            </div>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )
@@ -356,7 +423,7 @@ export function NosotrosPage() {
             {/* Next button */}
             <button
               onClick={() => moveTorneo("next")}
-              className="absolute right-0 top-[45%] -translate-y-1/2 translate-x-4 z-10 w-10 h-10 rounded-full bg-[#ed742e] hover:bg-[#c55a1f] flex items-center justify-center shadow-lg transition-colors"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 rounded-full bg-[#ed742e] hover:bg-[#c55a1f] flex items-center justify-center shadow-lg transition-colors"
               aria-label="Siguiente torneo"
             >
               <ChevronRight size={20} className="text-white" />

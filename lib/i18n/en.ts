@@ -226,11 +226,11 @@ export const en = {
     torneos_title: "Tournaments We Participate In",
     torneos_subtitle: "Competitions where we represent Ciudad del Carmen",
     torneos_items: [
-      { name: "Torneo Internacional UFD", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.jpg" },
-      { name: "Grupo Pachuca-León", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.jpeg" },
-      { name: "Liga Golden Jaguar Mérida", location: "Mérida, Yuc.", image: "/images/torneos/ligagolden.png" },
-      { name: "Super Copa Jaguar", location: "Mérida, Yuc.", image: "/images/torneos/copa_jaguar.jpeg" },
-      { name: "Copa Cancún", location: "Cancún, Q.R.", image: "/images/torneos/copa_cancun.jpg" },
+      { name: "UFD International Tournament", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.jpg", curiosity: "Kicks off one week before Holy Week in Pachuca, Hgo." },
+      { name: "Grupo Pachuca-León International Tournament", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.jpeg", curiosity: "Held during the first week of August in León, Gto." },
+      { name: "Copa Cancún", location: "Cancún, Q.Roo", image: "/images/torneos/copa_cancun.jpg", curiosity: "Takes place during the summer in Cancún, Q.Roo." },
+      { name: "Super Copa Jaguar Tournament", location: "Mérida, Yucatán", image: "/images/torneos/copa_jaguar.jpeg", curiosity: "Venue: Mérida, Yucatán." },
+      { name: "Liga Golden Plus", location: "Ciudad del Carmen, Cam.", image: "/images/torneos/ligagolden.png", curiosity: "We play at home — Ciudad del Carmen!" },
     ],
 
     slogan: "The stars are our children",
