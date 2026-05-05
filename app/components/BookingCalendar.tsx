@@ -123,10 +123,10 @@ export default function BookingCalendar() {
       <div className="relative">
 
         {/* Línea centrada EXACTAMENTE con los círculos */}
-        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[2px] bg-[#c8e4f8] dark:bg-[#205295] z-0" />
+        <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-0.5 bg-[#c8e4f8] dark:bg-[#205295] z-0" />
 
         <div
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-[2px] bg-[#3572ef] transition-all duration-500 z-0"
+          className="absolute left-0 top-1/2 -translate-y-1/2 h-0.5 bg-[#3572ef] transition-all duration-500 z-0"
           style={{
             width: `${(stepsDone.filter(Boolean).length - 1) / (tx.steps.length - 1) * 100}%`
           }}

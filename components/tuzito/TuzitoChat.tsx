@@ -215,7 +215,7 @@ export function TuzitoChat() {
   /* ─── Render ────────────────────────────────────────────────── */
   return (
     <div
-      className="fixed bottom-5 right-5 z-[9990] flex flex-col items-end gap-3 select-none"
+      className="fixed bottom-5 right-5 z-9990 flex flex-col items-end gap-3 select-none"
       style={{ transform: `translate(${dragOffset.x}px, ${dragOffset.y}px)` }}
     >
       {/* ── Chat window ─────────────────────────────────────────── */}
@@ -230,7 +230,7 @@ export function TuzitoChat() {
 
           <div
             className="animate-in fade-in zoom-in-95 slide-in-from-bottom-3 duration-300
-                       w-[min(92vw,400px)] h-[560px] max-h-[80vh]
+                       w-[min(92vw,400px)] h-140 max-h-[80vh]
                        flex flex-col rounded-3xl overflow-hidden
                        shadow-2xl shadow-black/25 border border-white/20"
             onClick={(e) => e.stopPropagation()}
@@ -238,9 +238,9 @@ export function TuzitoChat() {
             aria-label="Chat con Tuzito"
           >
             {/* Header */}
-            <header className="flex-shrink-0 bg-[#ed742e] px-4 py-3 flex items-center gap-3">
+            <header className="shrink-0 bg-[#ed742e] px-4 py-3 flex items-center gap-3">
               {/* Avatar */}
-              <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-white/40 flex-shrink-0 shadow-md">
+              <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-white/40 shrink-0 shadow-md">
                 <Image
                   src="/tuzito.png"
                   alt="Tuzito"
@@ -280,7 +280,7 @@ export function TuzitoChat() {
             </header>
 
             {/* Blue accent line */}
-            <div className="h-0.5 w-full bg-gradient-to-r from-transparent via-[#0b2472] to-transparent flex-shrink-0" />
+            <div className="h-0.5 w-full bg-linear-to-r from-transparent via-[#0b2472] to-transparent shrink-0" />
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto bg-slate-50 dark:bg-slate-900 px-4 py-4 space-y-4">
@@ -291,7 +291,7 @@ export function TuzitoChat() {
                 >
                   {/* Bot avatar */}
                   {msg.role === "assistant" && (
-                    <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 shadow-sm mt-0.5 border border-slate-200 dark:border-slate-700">
+                    <div className="relative w-8 h-8 rounded-full overflow-hidden shrink-0 shadow-sm mt-0.5 border border-slate-200 dark:border-slate-700">
                       <Image
                         src="/tuzito.png"
                         alt="Tuzito"
@@ -306,7 +306,7 @@ export function TuzitoChat() {
                   <div
                     className={`max-w-[78%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                       msg.role === "user"
-                        ? "bg-gradient-to-br from-[#ed742e] to-[#0b2472] text-white rounded-tr-sm shadow-md shadow-orange-500/20"
+                        ? "bg-linear-to-br from-[#ed742e] to-[#0b2472] text-white rounded-tr-sm shadow-md shadow-orange-500/20"
                         : "bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 rounded-tl-sm shadow-sm border border-slate-100 dark:border-slate-700"
                     }`}
                     dangerouslySetInnerHTML={{ __html: renderContent(msg.content) }}
@@ -317,7 +317,7 @@ export function TuzitoChat() {
               {/* Typing indicator */}
               {isTyping && (
                 <div className="flex gap-2.5 items-end">
-                  <div className="relative w-8 h-8 rounded-full overflow-hidden flex-shrink-0 border border-slate-200 dark:border-slate-700">
+                  <div className="relative w-8 h-8 rounded-full overflow-hidden shrink-0 border border-slate-200 dark:border-slate-700">
                     <Image src="/tuzito.png" alt="Tuzito" fill className="object-cover" draggable={false} />
                   </div>
                   <div className="bg-white dark:bg-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm border border-slate-100 dark:border-slate-700 flex items-center gap-1">
@@ -335,7 +335,7 @@ export function TuzitoChat() {
             {/* Input */}
             <form
               onSubmit={sendMessage}
-              className="flex-shrink-0 px-3 py-3 bg-white dark:bg-slate-800 border-t border-slate-100 dark:border-slate-700 flex gap-2 items-center"
+              className="shrink-0 px-3 py-3 bg-white dark:bg-slate-800 border-t border-slate-100 dark:border-slate-700 flex gap-2 items-center"
             >
               <input
                 ref={inputRef}
@@ -352,14 +352,14 @@ export function TuzitoChat() {
                 type="submit"
                 disabled={!input.trim() || isTyping}
                 aria-label={lang === "es" ? "Enviar mensaje" : "Send message"}
-                className="w-10 h-10 rounded-2xl bg-gradient-to-br from-[#f97316] to-[#ea580c] text-white flex items-center justify-center flex-shrink-0 hover:opacity-90 disabled:opacity-40 transition-all hover:scale-105 active:scale-95 shadow-md shadow-orange-500/30"
+                className="w-10 h-10 rounded-2xl bg-linear-to-br from-[#f97316] to-[#ea580c] text-white flex items-center justify-center shrink-0 hover:opacity-90 disabled:opacity-40 transition-all hover:scale-105 active:scale-95 shadow-md shadow-orange-500/30"
               >
                 <Send size={16} />
               </button>
             </form>
 
             {/* Footer */}
-            <div className="flex-shrink-0 py-1.5 bg-white dark:bg-slate-800 flex items-center justify-center gap-2">
+            <div className="shrink-0 py-1.5 bg-white dark:bg-slate-800 flex items-center justify-center gap-2">
               <span className="text-[10px] text-slate-400">
                 {lang === "es" ? "¿Necesitas ayuda?" : "Need help?"}
               </span>

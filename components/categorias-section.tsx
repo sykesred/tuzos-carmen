@@ -51,10 +51,10 @@ export function CategoriasSection() {
         {/* Genuine category — FEATURED top card */}
         <div
           id="genuine"
-          className="relative rounded-3xl overflow-hidden border-2 border-orange-400/60 dark:border-orange-500/40 bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 dark:from-orange-950/40 dark:via-amber-950/20 dark:to-orange-900/30 mb-10 shadow-xl shadow-orange-200/40 dark:shadow-orange-900/20"
+          className="relative rounded-3xl overflow-hidden border-2 border-orange-400/60 dark:border-orange-500/40 bg-linear-to-br from-orange-50 via-amber-50 to-orange-100 dark:from-orange-950/40 dark:via-amber-950/20 dark:to-orange-900/30 mb-10 shadow-xl shadow-orange-200/40 dark:shadow-orange-900/20"
         >
           {/* Orange top accent bar */}
-          <div className="h-2 w-full bg-gradient-to-r from-[#f97316] via-[#fb923c] to-[#f97316]" aria-hidden="true" />
+          <div className="h-2 w-full bg-linear-to-r from-[#f97316] via-[#fb923c] to-[#f97316]" aria-hidden="true" />
 
           {/* Decorative glows */}
           <div
@@ -136,14 +136,14 @@ export function CategoriasSection() {
     >
       {/* Gradient top bar */}
       <div
-        className={`h-1.5 w-full bg-gradient-to-r ${ACCENT_GRADIENT}`}
+        className={`h-1.5 w-full bg-linear-to-r ${ACCENT_GRADIENT}`}
         aria-hidden="true"
       />
 
       <div className="p-6">
         {/* Age badge */}
         <span
-          className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${ACCENT_GRADIENT} mb-4`}
+          className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-linear-to-r ${ACCENT_GRADIENT} mb-4`}
         >
           {cat.edades}
         </span>
