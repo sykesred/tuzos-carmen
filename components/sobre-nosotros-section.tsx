@@ -98,7 +98,7 @@ export function SobreNosotrosSection() {
                     <span className="text-xs text-muted-foreground">{t("sobre.visita_schedule")}</span>
                   </div>
                   <a
-                    href="https://maps.app.goo.gl/xFjfgKYrCo3wSifG7"
+                    href="https://maps.app.goo.gl/DtDPMrJvajAHpZEW9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-1 text-xs font-semibold text-primary hover:underline"

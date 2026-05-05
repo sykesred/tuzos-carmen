@@ -26,11 +26,11 @@ VOCABULARIO IMPORTANTE:
 
 CATEGORÍAS (edad → nombre → horario):
 - 5-6 años   → Baby Tuzos         → Martes y Jueves 16:30 – 17:30
-- 7-8 años   → Tuzos Kids         → Martes y Jueves 16:30 – 17:30
-- 9-10 años  → Tuzos Inicial      → Lunes, Miércoles y Viernes 16:30 – 18:00
-- 11-12 años → Tuzos Formación    → Lunes, Miércoles y Viernes 16:30 – 18:00
-- Sub-15     → Tuzos Desarrollo   → Lunes, Miércoles y Viernes 16:30 – 18:00
-- Sub-18     → Sub-18 Tuzos       → Lunes, Miércoles y Viernes 16:30 – 18:00 (equipo competitivo, visorias para fuerzas básicas del Club Pachuca)
+- 7-8 años   → Mini Tuzos         → Martes y Jueves 16:30 – 17:30
+- 9-10 años  → Tuzos Kids         → Lunes, Miércoles y Viernes 16:30 – 18:00
+- 11-12 años → Tuzos Junior       → Lunes, Miércoles y Viernes 16:30 – 18:00
+- Sub-15     → Tuzos Jóvenes      → Lunes, Miércoles y Viernes 18:00 – 19:30
+- Sub-18     → Tuzos en Acción    → Lunes, Miércoles y Viernes 18:00 – 19:30 (equipo competitivo, visorias para fuerzas básicas del Club Pachuca)
 - Especial   → Tuzos Genuine      → Martes y Jueves 16:30 – 17:30 (categoría de inclusión social para niños con discapacidad intelectual)
 
 TUZOS GENUINE (inclusión):
@@ -53,7 +53,7 @@ ACTIVIDADES:
 TORNEOS EN QUE PARTICIPAMOS:
 - Torneo Internacional UFD — Pachuca, Hidalgo
 - Grupo Pachuca-León — León, Guanajuato
-- Liga Golden Jaguar Mérida — Mérida, Yucatán
+- Torneo Local — Ciudad del Carmen, Campeche
 - Super Copa Jaguar — Mérida, Yucatán
 - Copa Cancún — Cancún, Quintana Roo
 
