@@ -27,6 +27,16 @@ const CAT_IDS = [
   "cat-genuine",
 ]
 
+const diasSemana: Record<number, string> = {
+  1: "Lunes",
+  2: "Martes",
+  3: "Miércoles",
+  4: "Jueves",
+  5: "Viernes",
+  6: "Sábado",
+  7: "Domingo",
+}
+
 export function CategoriasSection() {
   const { t, lang } = useLanguage()
   const translations = { es, en }
@@ -109,16 +119,28 @@ export function CategoriasSection() {
               </div>
 
               {/* Right – motto + date */}
-              <div className="flex flex-col items-center lg:items-end text-center lg:text-right gap-5">
+               <div className="flex flex-col items-center lg:items-end text-center lg:text-right gap-5">
                 <p className="font-heading font-black text-2xl sm:text-3xl text-orange-700 dark:text-orange-300 leading-snug">
                   {genuineData.motto}
                 </p>
+
                 <div className="flex flex-col gap-1">
                   <p className="font-heading font-black text-4xl text-orange-900 dark:text-orange-100">
                     {genuineData.date_label}
                   </p>
+
                   <p className="text-sm text-orange-700/80 dark:text-orange-300/80">
                     {genuineData.date_desc}
+                  </p>
+                </div>
+
+                <div className="inline-flex flex-col items-center lg:items-end gap-1 rounded-2xl border border-orange-300/60 dark:border-orange-400/20 bg-white/60 dark:bg-white/5 px-5 py-4 shadow-sm">
+                  <p className="text-xs font-bold uppercase tracking-wide text-orange-700 dark:text-orange-300">
+                    {genuineData.schedule_title}
+                  </p>
+
+                  <p className="text-sm font-semibold text-orange-900 dark:text-orange-100">
+                    🕒 {genuineData.schedule}
                   </p>
                 </div>
               </div>
@@ -163,7 +185,7 @@ export function CategoriasSection() {
           <div className="flex flex-col text-xs text-[#0b2472] dark:text-muted-foreground">
             {cat.horarios?.map((h, idx) => (
               <span key={idx}>
-                🕒 {h.inicio} - {h.fin}
+                🕒 {cat.dias?.map((dia) => diasSemana[dia]).join(", ")} · {h.inicio} - {h.fin}
               </span>
             ))}
           </div>

@@ -134,6 +134,8 @@ export const en = {
     date_label: "March 21",
     date_desc: "World Down Syndrome Day",
     cta: "Learn more about Genuine",
+    schedule_title: "Training Schedule",
+    schedule: "Tuesdays and Thursdays from 16:30 to 17:30 pm",
   },
 
   actividades: {

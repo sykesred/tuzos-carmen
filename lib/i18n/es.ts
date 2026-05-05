@@ -128,7 +128,8 @@ export const es = {
     date_label: "21 de Marzo",
     date_desc: "Día Mundial del Síndrome de Down",
     cta: "Conoce más sobre Genuine",
-    schedule: "Entrenamos Martes y Jueves de 16:30 a 17:30 pm",
+    schedule_title: "Horario de Entrenamiento",
+    schedule: "Martes y Jueves de 16:30 a 17:30 pm",
   },
 
   actividades: {
