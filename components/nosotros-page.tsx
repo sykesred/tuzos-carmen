@@ -316,41 +316,45 @@ export function NosotrosPage() {
                   >
                     {/* Gradient border wrapper */}
                     <div
-                      className="rounded-2xl shadow-2xl"
+                      className="rounded-lg shadow-2xl"
                       style={{
                         padding: '3px',
                         background: isCenter
                           ? 'linear-gradient(135deg, #ed742e 0%, #0b2472 50%, #ed742e 100%)'
-                          : 'linear-gradient(135deg, #ed742e60 0%, #0b247260 100%)',
+                          : 'linear-gradient(135deg, #ed742e55 0%, #0b247255 100%)',
                       }}
                     >
                       {/* Perspective + flip container */}
-                      <div style={{ perspective: '1000px' }}>
+                      <div style={{ perspective: '1200px' }}>
                         <div
                           style={{
                             transformStyle: 'preserve-3d',
-                            transition: 'transform 0.75s ease-in-out',
+                            transition: 'transform 0.85s cubic-bezier(0.645, 0.045, 0.355, 1)',
                             transform: isCenter && isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
                             position: 'relative',
-                            height: isCenter ? '380px' : '300px',
-                            borderRadius: '13px',
+                            height: isCenter ? '390px' : '300px',
+                            borderRadius: '6px',
                           }}
                         >
-                          {/* Front face — full-size image */}
+                          {/* Front face — image completa con contain */}
                           <div
                             style={{
                               position: 'absolute',
                               inset: 0,
                               backfaceVisibility: 'hidden',
                               WebkitBackfaceVisibility: 'hidden',
-                              borderRadius: '13px',
+                              borderRadius: '6px',
                               overflow: 'hidden',
+                              background: '#040f2e',
+                              display: 'flex',
+                              alignItems: 'center',
+                              justifyContent: 'center',
                             }}
                           >
                             <img
                               src={torneo.image}
                               alt={torneo.name}
-                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                             />
                           </div>
 
@@ -364,38 +368,44 @@ export function NosotrosPage() {
                                 WebkitBackfaceVisibility: 'hidden',
                                 transform: 'rotateY(180deg)',
                                 background: 'linear-gradient(160deg, #061a5c 0%, #0b2472 100%)',
-                                borderRadius: '13px',
+                                borderRadius: '6px',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                padding: '28px 24px',
-                                gap: '14px',
+                                padding: '32px 28px',
+                                gap: '18px',
                               }}
                             >
-                              <div style={{ width: '44px', height: '4px', background: '#ed742e', borderRadius: '2px' }} />
+                              <span style={{
+                                color: '#ed742e',
+                                fontSize: '10px',
+                                fontWeight: 800,
+                                letterSpacing: '0.15em',
+                                textTransform: 'uppercase',
+                              }}>
+                                Dato curioso
+                              </span>
                               <p style={{
                                 color: 'white',
                                 fontWeight: 900,
-                                fontSize: '19px',
+                                fontSize: '20px',
                                 textAlign: 'center',
-                                lineHeight: '1.3',
+                                lineHeight: '1.25',
+                                margin: 0,
                               }}>
                                 {torneo.name}
                               </p>
+                              <div style={{ width: '36px', height: '2px', background: 'linear-gradient(90deg, #ed742e, #0b2472)' }} />
                               <p style={{
-                                color: 'rgba(255,255,255,0.82)',
+                                color: 'rgba(255,255,255,0.85)',
                                 textAlign: 'center',
-                                fontSize: '14.5px',
-                                lineHeight: '1.65',
+                                fontSize: '15px',
+                                lineHeight: '1.6',
+                                margin: 0,
                               }}>
                                 {torneo.curiosity}
                               </p>
-                              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginTop: '6px' }}>
-                                <MapPin size={13} style={{ color: '#ed742e', flexShrink: 0 }} />
-                                <span style={{ color: 'rgba(255,255,255,0.45)', fontSize: '12px' }}>{torneo.location}</span>
-                              </div>
-                              <div style={{ width: '44px', height: '4px', background: '#0b2472', borderRadius: '2px', border: '1px solid #ed742e50' }} />
                             </div>
                           )}
                         </div>
