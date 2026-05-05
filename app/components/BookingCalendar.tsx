@@ -246,14 +246,14 @@ export default function BookingCalendar() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder={tx.placeholderName}
-                className="w-full mb-3"
+                className="w-full mb-3 bg-[#f5faff] dark:bg-[#0a2647] text-[#0a0f2c] dark:text-[#e8f4fd] border border-[#c8e4f8] dark:border-[#205295] rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#3572ef] focus:border-transparent transition-all"
               />
 
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={tx.placeholderEmail}
-                className="w-full mb-4"
+                className="w-full mb-4 bg-[#f5faff] dark:bg-[#0a2647] text-[#0a0f2c] dark:text-[#e8f4fd] border border-[#c8e4f8] dark:border-[#205295] rounded-xl px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#3572ef] focus:border-transparent transition-all"
               />
 
               <button
