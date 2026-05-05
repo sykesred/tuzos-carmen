@@ -161,9 +161,9 @@ export function NosotrosPage() {
             <img
               src="/images/equipo.jpeg"
               alt="Equipo completo de Tuzos Carmen — jugadores y cuerpo técnico"
-              className="w-full h-[400px] sm:h-[520px] lg:h-[600px] object-cover object-top"
+              className="w-full h-100 sm:h-130 lg:h-150ect-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-12">
               <p className="text-brand-sky text-xs font-bold uppercase tracking-widest mb-2">
                 {lang === "en" ? "Our Team" : "Nuestro Equipo"}
@@ -314,6 +314,7 @@ export function NosotrosPage() {
                       }`}
                     onClick={!isCenter ? () => setActiveIdx(idx) : undefined}
                   >
+<<<<<<< HEAD
                     {/* Gradient border wrapper */}
                     <div
                       className="shadow-2xl"
@@ -407,6 +408,25 @@ export function NosotrosPage() {
                           )}
                         </div>
                       </div>
+=======
+                    {/* Card image area */}
+                    <div className={`h-48 flex items-center justify-center relative overflow-hidden bg-linear-to-br ${TORNEO_GRADIENTS[idx % TORNEO_GRADIENTS.length]}`}>
+                      <img
+                        src={torneo.image}
+                        alt={torneo.name}
+                        className={`object-contain drop-shadow-xl transition-all duration-500 ${isCenter ? "h-36" : "h-28"}`}
+                      />
+                    </div>
+                    {/* Card body */}
+                    <div className="p-5 flex flex-col gap-1 bg-white/5 flex-1">
+                      <p className="font-heading font-black text-base text-white leading-tight">
+                        {torneo.name}
+                      </p>
+                      <p className="text-xs text-white/50 flex items-center gap-1.5">
+                        <MapPin size={11} className="text-[#ed742e] shrink-0" />
+                        {torneo.location}
+                      </p>
+>>>>>>> acd460a (imagen torneo local)
                     </div>
                   </div>
                 )
@@ -505,7 +525,7 @@ export function NosotrosPage() {
             <AnimatedBalls />
 
             {/* Photo */}
-            <div className="relative z-10 py-12 flex justify-center bg-gradient-to-b from-white/5 to-transparent">
+            <div className="relative z-10 py-12 flex justify-center bg-linear-to-b from-white/5 to-transparent">
               <img
                 src="/images/visitanos.png"
                 alt="Ven a visitarnos"
@@ -514,7 +534,7 @@ export function NosotrosPage() {
             </div>
 
             {/* Orange divider line */}
-            <div className="relative z-10 h-1 bg-gradient-to-r from-transparent via-[#ed742e] to-transparent" />
+            <div className="relative z-10 h-1 bg-linear-to-r from-transparent via-[#ed742e] to-transparent" />
 
             {/* Text content */}
             <div className="relative z-10 px-8 sm:px-16 py-12 text-center flex flex-col items-center gap-5">

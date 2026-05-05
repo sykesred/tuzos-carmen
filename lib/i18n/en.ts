@@ -224,7 +224,7 @@ export const en = {
     ],
 
     torneos_title: "Tournaments We Participate In",
-    torneos_subtitle: "Competitions where we represent Ciudad del Carmen",
+    torneos_subtitle: "Competitions where we represent Tuzos Carmen",
     torneos_items: [
       { name: "UFD International Tournament", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.png", curiosity: "Kicks off one week before Holy Week in Pachuca, Hgo." },
       { name: "Grupo Pachuca-León International Tournament", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.png", curiosity: "Held during the first week of August in León, Gto." },

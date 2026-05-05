@@ -219,7 +219,7 @@ export const es = {
     ],
 
     torneos_title: "Torneos a Participar",
-    torneos_subtitle: "Competencias en las que representamos a Ciudad del Carmen",
+    torneos_subtitle: "Competencias en las que representamos a Tuzos Carmen",
     torneos_items: [
       { name: "Torneo Internacional UFD", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.png", curiosity: "Inicia una semana antes de Semana Santa en Pachuca, Hgo." },
       { name: "Torneo Internacional Grupo Pachuca-León", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.png", curiosity: "Se lleva a cabo la primera semana de agosto en León, Gto." },
