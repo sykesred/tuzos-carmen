@@ -243,7 +243,7 @@ export const es = {
     visita_title: "Ven a Visitarnos",
     visita_desc:
       "Estamos ubicados en Ciudad del Carmen, Campeche. Entrenamos en un espacio seguro.",
-    visita_address: "Ciudad del Carmen, Campeche, México",
+    visita_address: "Batab 300 INT 24, Pemex II, Cdad. del Carmen, Camp.",
     visita_schedule: "Lunes a Viernes · 4:00 PM – 8:00 PM",
     visita_cta: "Cómo llegar",
   },
@@ -307,7 +307,7 @@ export const es = {
     visita_title: "Ven a Visitarnos",
     visita_desc:
       "Estamos ubicados en Ciudad del Carmen, Campeche. Entrenamos en un espacio seguro.",
-    visita_address: "Ciudad del Carmen, Campeche, México",
+    visita_address: "Batab 300 INT 24, Pemex II, Cdad. del Carmen, Camp.",
     visita_schedule: "Lunes a Viernes · 4:00 PM – 8:00 PM",
     visita_cta: "Cómo llegar",
   },

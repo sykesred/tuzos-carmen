@@ -8,9 +8,9 @@ import { MessageCircle, Phone, Mail, MapPin, Facebook, Instagram, Send, Navigati
 const WHATSAPP_URL =
   "https://wa.me/529382780560?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Tuzos%20Carmen."
 
-const MAPS_URL = "https://maps.app.goo.gl/DtDPMrJvajAHpZEW9"
+const MAPS_URL = "https://maps.app.goo.gl/mZiVZPBscXUFSqVw7"
 const MAPS_EMBED_URL =
-  "https://maps.google.com/maps?q=Batab+300+INT+24,+Pemex+II,+24160+Ciudad+del+Carmen,+Campeche,+Mexico&output=embed&z=16"
+  "https://maps.google.com/maps?q=Club+Petrolero+Campechano+A.C.,+Batab+300+INT+24,+Pemex+II,+24160+Ciudad+del+Carmen,+Campeche&output=embed&z=17"
 
 export function ContactoSection() {
   const { t } = useLanguage()

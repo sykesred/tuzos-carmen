@@ -249,7 +249,7 @@ export const en = {
     visita_title: "Come Visit Us",
     visita_desc:
       "We are located in Ciudad del Carmen, Campeche. We train in a safe space.",
-    visita_address: "Ciudad del Carmen, Campeche, Mexico",
+    visita_address: "Batab 300 INT 24, Pemex II, Cdad. del Carmen, Camp.",
     visita_schedule: "Monday to Friday · 4:00 PM – 8:00 PM",
     visita_cta: "Get Directions",
   },
@@ -313,7 +313,7 @@ export const en = {
     visita_title: "Come Visit Us",
     visita_desc:
       "We are located in Ciudad del Carmen, Campeche. We train in a safe space.",
-    visita_address: "Ciudad del Carmen, Campeche, Mexico",
+    visita_address: "Batab 300 INT 24, Pemex II, Cdad. del Carmen, Camp.",
     visita_schedule: "Monday to Friday · 4:00 PM – 8:00 PM",
     visita_cta: "Get Directions",
   },

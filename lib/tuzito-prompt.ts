@@ -8,7 +8,7 @@ export function getSystemPrompt(lang: TuzitoLang = "es"): string {
 const CORE = `
 ESCUELA: Escuela de Fútbol Tuzos Carmen
 FILIAL: Escuela filial oficial del Club Tuzos de Pachuca (Liga MX) — parte del Grupo Pachuca
-UBICACIÓN: Batab 300 INT 24, Pemex II, 24160 Ciudad del Carmen, Campeche, México
+UBICACIÓN: Batab 300 INT 24, Pemex II, 24160 Cdad. del Carmen, Camp. (Club Petrolero Campechano A.C.)
 WHATSAPP: 938 278 0560
 TELÉFONO: +52 938 278 0560
 CORREO: tuzosciudaddelcarmen@gmail.com

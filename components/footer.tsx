@@ -184,7 +184,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://maps.app.goo.gl/DtDPMrJvajAHpZEW9"
+                  href="https://maps.app.goo.gl/mZiVZPBscXUFSqVw7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-white/60 hover:text-white transition-colors leading-snug block"
