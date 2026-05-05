@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import CategoriasClient from "./CategoriasClient"
 
 import { CategoriasSection } from "@/components/categorias-section"
@@ -37,7 +38,9 @@ export default function CategoriasPage() {
       </div>
 
       {/* Aquí va todo lo dinámico */}
-      <CategoriasClient />
+      <Suspense>
+        <CategoriasClient />
+      </Suspense>
     </main>
   )
 }
