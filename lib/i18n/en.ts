@@ -241,7 +241,7 @@ export const en = {
 
     equipo_title: "Meet the Team",
     equipo_highlight:
-      "Our coaches hold a degree in physical education and are certified by Club Pachuca",
+      "Our coaches hold a degree in Physical Education and are certified by Club Pachuca",
     equipo_desc: "Our technical staff is committed to the development of every Tuzobrino",
 
     visita_title: "Come Visit Us",
@@ -346,6 +346,6 @@ export const en = {
     contact_title: "Contact",
     social_title: "Social Media",
     copyright: "© 2025 Tuzos Carmen. All rights reserved.",
-    affiliation: "Official affiliate school of Tuzos Carmen.",
+    affiliation: "Official Affiliate School of Club Pachuca.",
   },
 } as const

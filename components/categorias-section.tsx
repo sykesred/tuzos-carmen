@@ -1,5 +1,6 @@
 "use client"
 
+import { CATEGORIAS } from "@/lib/categorias"
 import { useLanguage } from "@/lib/i18n/index"
 import { es } from "@/lib/i18n/es"
 import { en } from "@/lib/i18n/en"
@@ -29,7 +30,6 @@ const CAT_IDS = [
 export function CategoriasSection() {
   const { t, lang } = useLanguage()
   const translations = { es, en }
-  const cats = translations[lang].categorias.cats as unknown as CatItem[]
   const genuineData = translations[lang].genuine
 
   return (
@@ -128,57 +128,62 @@ export function CategoriasSection() {
 
         {/* Regular categories grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {cats.map((cat, i) => (
-            <div
-              key={cat.age}
-              id={CAT_IDS[i]}
-              className="group relative bg-[#fff7f2] dark:bg-card border border-[#ffd4b0] dark:border-border rounded-2xl overflow-hidden hover:shadow-lg dark:hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 scroll-mt-20"
-            >
-              {/* Gradient top bar */}
-              <div
-                className={`h-1.5 w-full bg-gradient-to-r ${ACCENT_GRADIENT}`}
-                aria-hidden="true"
-              />
+  {CATEGORIAS.filter(cat => !cat.especial).map((cat) => (
+    <div
+      key={cat.id}
+      id={cat.id}
+      className="group relative bg-[#fff7f2] dark:bg-card border border-[#ffd4b0] dark:border-border rounded-2xl overflow-hidden hover:shadow-lg dark:hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-300 scroll-mt-20"
+    >
+      {/* Gradient top bar */}
+      <div
+        className={`h-1.5 w-full bg-gradient-to-r ${ACCENT_GRADIENT}`}
+        aria-hidden="true"
+      />
 
-              <div className="p-6">
-                {/* Age badge */}
-                <span
-                  className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${ACCENT_GRADIENT} mb-4`}
-                >
-                  {cat.age}
-                </span>
+      <div className="p-6">
+        {/* Age badge */}
+        <span
+          className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${ACCENT_GRADIENT} mb-4`}
+        >
+          {cat.edades}
+        </span>
 
-                {/* Name */}
-                <h3 className="font-heading font-black text-xl text-gray-900 dark:text-foreground mb-2">
-                  {cat.name}
-                </h3>
+        {/* Name */}
+        <h3 className="font-heading font-black text-xl text-gray-900 dark:text-foreground mb-2">
+          {cat.nombre}
+        </h3>
 
-                {/* Description */}
-                <p className="text-sm text-[#0b2472] dark:text-muted-foreground leading-relaxed mb-5">
-                  {cat.desc}
-                </p>
+        {/* Description */}
+        <p className="text-sm text-[#0b2472] dark:text-muted-foreground leading-relaxed mb-5">
+          {cat.descripcion}
+        </p>
 
-                {/* Footer row */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-xs text-[#0b2472] dark:text-muted-foreground">
-                    <span className="flex items-center gap-1.5 text-xs text-blue-500 dark:text-muted-foreground">
-                      🕒 {cat.schedule}
-                    </span>
-                  </div>
-                  <a
-                    href={`${WHATSAPP_BASE}${encodeURIComponent(`Hola, quisiera información sobre inscripciones en ${cat.name} (${cat.age}).`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-xs font-semibold text-[#0b2472] dark:text-primary hover:text-[#ed742e] dark:hover:text-primary/80 transition-colors"
-                  >
-                    <MessageCircle size={13} />
-                    Inscribirse
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Footer row */}
+        <div className="flex items-center justify-between">
+          <div className="flex flex-col text-xs text-[#0b2472] dark:text-muted-foreground">
+            {cat.horarios?.map((h, idx) => (
+              <span key={idx}>
+                🕒 {h.inicio} - {h.fin}
+              </span>
+            ))}
+          </div>
+
+          <a
+            href={`${WHATSAPP_BASE}${encodeURIComponent(
+              `Hola, quisiera información sobre inscripciones en ${cat.nombre} (${cat.edades}).`
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-xs font-semibold text-[#0b2472] dark:text-primary hover:text-[#ed742e] dark:hover:text-primary/80 transition-colors"
+          >
+            <MessageCircle size={13} />
+            Inscribirse
+          </a>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   )

@@ -290,3 +290,95 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
+/* ======================================== */
+/* 🔥 FULLCALENDAR – FIX COMPLETO TUZOS     */
+/* ======================================== */
+
+/* 🟢 DÍA SELECCIONADO */
+.booking-calendar-wrapper .fc .fc-day-selected {
+  background-color: #ed742e !important;
+}
+
+.booking-calendar-wrapper .fc .fc-day-selected .fc-daygrid-day-number {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+/* 🌙 DARK MODE – SELECTED */
+.dark .booking-calendar-wrapper .fc .fc-day-selected {
+  background-color: #ed742e !important;
+}
+
+/* 🔴 DÍAS BLOQUEADOS */
+.booking-calendar-wrapper .fc .fc-day-disabled {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.booking-calendar-wrapper .fc .fc-day-disabled .fc-daygrid-day-number {
+  opacity: 0.3;
+}
+
+/* 🌙 DARK MODE – DISABLED */
+.dark .booking-calendar-wrapper .fc .fc-day-disabled {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-day-disabled .fc-daygrid-day-number {
+  color: #ffffff !important;
+  opacity: 0.2;
+}
+
+/* 🔵 DÍAS NORMALES (DARK) */
+.dark .booking-calendar-wrapper .fc .fc-daygrid-day {
+  background-color: #144272 !important;
+}
+
+/* 🔵 TEXTO DE LOS DÍAS (DARK) */
+.dark .booking-calendar-wrapper .fc .fc-daygrid-day-number {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+/* 🔵 DÍAS FUERA DEL MES */
+.dark .booking-calendar-wrapper .fc .fc-day-other {
+  background-color: #0a2647 !important;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-day-other .fc-daygrid-day-number {
+  opacity: 0.25;
+}
+
+/* 🔵 HOVER SOLO EN DÍAS VÁLIDOS */
+.dark .booking-calendar-wrapper .fc .fc-daygrid-day:not(.fc-day-disabled):hover {
+  background-color: #205295 !important;
+  cursor: pointer;
+}
+
+/* 🔵 DÍA ACTUAL */
+.booking-calendar-wrapper .fc .fc-day-today {
+  background-color: #fff0e6 !important;
+}
+
+.dark .booking-calendar-wrapper .fc .fc-day-today {
+  background-color: #205295 !important;
+}
+
+.booking-calendar-wrapper .fc .fc-day-today .fc-daygrid-day-number {
+  background-color: #0b2472;
+  color: white;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔵 BORDES */
+.dark .booking-calendar-wrapper .fc td,
+.dark .booking-calendar-wrapper .fc th {
+  border-color: #205295 !important;
+}

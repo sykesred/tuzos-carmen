@@ -236,7 +236,7 @@ export const es = {
 
     equipo_title: "Conoce al Equipo",
     equipo_highlight:
-      "Contamos con entrenadores con carrera en licenciatura en educación física y certificados por el Club Pachuca",
+      "Contamos con entrenadores con formación en Licenciatura en Educación Física y certificados por el Club Pachuca",
     equipo_desc: "Nuestro cuerpo técnico está comprometido con el desarrollo de cada tuzobrino",
 
     visita_title: "Ven a Visitarnos",
@@ -341,6 +341,6 @@ export const es = {
     contact_title: "Contacto",
     social_title: "Redes Sociales",
     copyright: "© 2025 Tuzos Carmen. Todos los derechos reservados.",
-    affiliation: "Escuela filial oficial de Tuzos Carmen.",
+    affiliation: "Escuela Filial Oficial del Club Pachuca.",
   },
 } as const
