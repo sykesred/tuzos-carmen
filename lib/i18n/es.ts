@@ -221,10 +221,10 @@ export const es = {
     torneos_title: "Torneos a Participar",
     torneos_subtitle: "Competencias en las que representamos a Ciudad del Carmen",
     torneos_items: [
-      { name: "Torneo Internacional UFD", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.jpg", curiosity: "Inicia una semana antes de Semana Santa en Pachuca, Hgo." },
-      { name: "Torneo Internacional Grupo Pachuca-León", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.jpeg", curiosity: "Se lleva a cabo la primera semana de agosto en León, Gto." },
-      { name: "Copa Cancún", location: "Cancún, Q.Roo", image: "/images/torneos/copa_cancun.jpg", curiosity: "Sucede durante el verano en Cancún, Q.Roo." },
-      { name: "Torneo Super Copa Jaguar", location: "Mérida, Yucatán", image: "/images/torneos/copa_jaguar.jpeg", curiosity: "Sede: Mérida, Yucatán." },
+      { name: "Torneo Internacional UFD", location: "Pachuca, Hgo.", image: "/images/torneos/torneo_ufd.png", curiosity: "Inicia una semana antes de Semana Santa en Pachuca, Hgo." },
+      { name: "Torneo Internacional Grupo Pachuca-León", location: "León, Gto.", image: "/images/torneos/torneo_gp_leon.png", curiosity: "Se lleva a cabo la primera semana de agosto en León, Gto." },
+      { name: "Copa Cancún", location: "Cancún, Q.Roo", image: "/images/torneos/copa_cancun.png", curiosity: "Sucede durante el verano en Cancún, Q.Roo." },
+      { name: "Torneo Super Copa Jaguar", location: "Mérida, Yucatán", image: "/images/torneos/copa_jaguar.png", curiosity: "Sede: Mérida, Yucatán." },
       { name: "Torneo Local", location: "Ciudad del Carmen, Cam.", image: "/images/torneos/ligagolden.png", curiosity: "¡Jugamos en nuestra casa, Ciudad del Carmen!" },
     ],
 

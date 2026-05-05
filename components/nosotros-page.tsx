@@ -318,7 +318,7 @@ export function NosotrosPage() {
                     <div
                       className="shadow-2xl"
                       style={{
-                        borderRadius: '6px',
+                        borderRadius: '12px',
                         padding: '3px',
                         background: isCenter
                           ? 'linear-gradient(135deg, #ed742e 0%, #0b2472 50%, #ed742e 100%)'
@@ -333,30 +333,25 @@ export function NosotrosPage() {
                             transition: 'transform 0.85s cubic-bezier(0.645, 0.045, 0.355, 1)',
                             transform: isCenter && isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
                             position: 'relative',
-                            height: isCenter ? '390px' : '300px',
-                            borderRadius: '3px',
+                            aspectRatio: '687 / 1024',
+                            borderRadius: '9px',
                           }}
                         >
-                          {/* Front face — imagen con relleno y fondo difuminado */}
+                          {/* Front face — imagen */}
                           <div
                             style={{
                               position: 'absolute',
                               inset: 0,
                               backfaceVisibility: 'hidden',
                               WebkitBackfaceVisibility: 'hidden',
-                              borderRadius: '3px',
+                              borderRadius: '9px',
                               overflow: 'hidden',
-                              background: 'radial-gradient(ellipse at 25% 75%, rgba(237,116,46,0.38) 0%, transparent 50%), radial-gradient(ellipse at 75% 25%, rgba(26,58,176,0.55) 0%, transparent 55%), #07102b',
-                              padding: '8px',
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
                             }}
                           >
                             <img
                               src={torneo.image}
                               alt={torneo.name}
-                              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                             />
                           </div>
 
@@ -370,7 +365,7 @@ export function NosotrosPage() {
                                 WebkitBackfaceVisibility: 'hidden',
                                 transform: 'rotateY(180deg)',
                                 background: 'linear-gradient(160deg, #061a5c 0%, #0b2472 100%)',
-                                borderRadius: '3px',
+                                borderRadius: '9px',
                                 display: 'flex',
                                 flexDirection: 'column',
                                 alignItems: 'center',
