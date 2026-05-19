@@ -86,7 +86,7 @@ export default function BookingCalendar() {
       await Swal.fire({
         icon: "success",
         title: "Tuzos Carmen ⚽",
-        text: "Tu clase muestra se agendó correctamente",
+        text: "Tu clase muestra se agendó correctamente. Por favor revisa tu carpeta de Spam en caso de no encontrar nuestro correo en la bandeja de entrada.",
         confirmButtonColor: "#ed742e",
       })
     } catch {
