@@ -15,8 +15,11 @@ const CATEGORY_LABELS: Record<string, string> = {
 
 // 📅 Generador de archivo ICS
 function generateICS(date: string, time: string) {
-  const start = new Date(`${date}T${time}:00`)
-  const end = new Date(start.getTime() + 60 * 60 * 1000)
+  const [startTime, endTime] = time.split(" - ").map(t => t.trim())
+  const start = new Date(`${date}T${startTime}:00`)
+  const end = endTime
+    ? new Date(`${date}T${endTime}:00`)
+    : new Date(start.getTime() + 60 * 60 * 1000)
 
   const formatDate = (d: Date) =>
     d.toISOString().replace(/[-:]/g, "").split(".")[0] + "Z"
@@ -72,7 +75,8 @@ const toEmails = [
       fechaBonitaRaw.charAt(0).toUpperCase() + fechaBonitaRaw.slice(1)
 
     // ⏰ Hora bonita
-    const horaBonita = new Date(`1970-01-01T${time}`).toLocaleTimeString(
+    const startTime = time.split(" - ")[0].trim()
+    const horaBonita = new Date(`1970-01-01T${startTime}:00`).toLocaleTimeString(
       "es-MX",
       {
         hour: "numeric",
